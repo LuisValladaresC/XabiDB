@@ -1,0 +1,34 @@
+/* --------------------------- *\
+			VARIABLES
+\* --------------------------- */
+
+:root {
+	/* Colors */
+	--color-black: #000000;
+	--color-darkgray: #5a6268;
+	--color-gray: #6c757d;
+	--color-lightgray: #bec7d5;
+	--color-white: #ffffff;
+	
+	--color-section-culture: #3CA562;
+	--color-section-track-planner: #017EFE;
+	--color-section-spin-trowel: #B3B4C6;
+	--color-section-oiz-it: #017EFE;
+	--color-section-onda: #CBAB5E;
+    --color-section-xabidb: #000000;
+    
+    /* Backgrounds */
+    --image-section-culture: url('../images/culture.png');
+	--image-section-track-planner: url('../images/track-planner.png');
+	--image-section-spin-trowel: url('../images/spin-trowel.png');
+	--image-section-oiz-it: url('../images/oiz-it.png');
+	--image-section-onda: url('../images/onda.png');
+    --image-section-xabidb: url('../images/xabidb.png');
+
+    --image-section-culture-mobile: url('../images/culture-mobile.png');
+	--image-section-track-planner-mobile: url('../images/track-planner-mobile.png');
+	--image-section-spin-trowel-mobile: url('../images/spin-trowel-mobile.png');
+	--image-section-oiz-it-mobile: url('../images/oiz-it-mobile.png');
+	--image-section-onda-mobile: url('../images/onda-mobile.png');
+    --image-section-xabidb-mobile: url('../images/xabidb-mobile.png');
+}

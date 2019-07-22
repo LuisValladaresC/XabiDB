@@ -1,0 +1,18 @@
+/* --------------------------- *\
+			HEADER
+\* --------------------------- */
+
+header {
+    grid-column: 2 span;
+
+    display: flex;
+    justify-content: space-between
+}
+
+    .header-logo {
+        width: 60px; /* */
+    }
+    
+    .header-menu {
+        display: none;
+    }

@@ -1,0 +1,137 @@
+@media (max-width: 1024px) {
+    /* --- GENERALES --- */
+    html {
+        font-size: 13px;
+    }
+    
+    /* ---- SECTION ---- */
+    .section-title {
+        transform: scaleY(1.33);
+        padding: 0.15em 0;
+    }
+    #track_planner .section-title {
+        padding: 0.15em 0;
+    }
+}
+@media (max-width: 962px) {
+    #track_planner .section-title {
+        padding: 0.30em 0;
+    }
+}
+@media (max-width: 833px) {
+    #spin_trowel .section-title {
+        padding: 0.30em 0;
+        z-index: 200;
+    }
+}
+
+@media (max-width: 768px) {
+    /* --- GENERALES --- */
+    html {
+        font-size: 10px;
+    }
+
+    .header-logo {
+        width: 52px;
+    }
+
+    /* ---- SECTION ---- */
+    section {
+        padding-top: 3.5rem;
+    }
+    
+        .section-title {
+            transform: scaleY(1.1);
+            padding: 0.12em 0;
+        }
+        #track_planner .section-title {
+            padding: 0.12em 0;
+        }
+        #spin_trowel .section-title {
+            padding: 0.12em 0;
+        }
+
+    /* ---- FOOTER ----- */
+    .footer-text {
+        font-size: 9.6px;
+    }
+
+    .footer-icon {
+        width: 17.4px;
+    }
+}
+@media (max-width: 580px) {
+    section {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+@media (max-width: 425px) {
+    /* --- GENERALES --- */
+    html {
+        font-size: 8px;
+    }
+
+    /* ---- HEADER ----- */
+    .header-menu {
+        display: block;
+        height: 30px;
+
+        align-self: center;
+    }
+
+    /* ---- SECTION ---- */
+    section {
+        padding: 5rem 1.8rem 0;
+    }
+
+        .section-title {
+            font-size: 7em;
+            transform: scaleY(1.4);
+
+            padding-top: 0.5em;
+            padding-bottom: 0.25em;
+        }
+        #track_planner .section-title,
+        #spin_trowel .section-title {
+            padding-top: 1em;
+            padding-bottom: 0.5em;
+        }
+
+        .section-link {
+            font-size: 1.6em;
+        }
+
+        #culture .section-background-image {
+            background-image: var(--image-section-culture-mobile);
+        }
+        #track_planner .section-background-image {
+            background-image: var(--image-section-track-planner-mobile);
+        }
+        #spin_trowel .section-background-image {
+            background-image: var(--image-section-spin-trowel-mobile);
+            background-position-y: bottom;
+        }
+            #spin_trowel.active .section-background-image {
+                animation: movimiento2 800ms;
+            }
+        #oiz_it .section-background-image {
+            background-image: var(--image-section-oiz-it-mobile);
+        }
+        #onda .section-background-image {
+            background-image: var(--image-section-onda-mobile);
+        }
+        #xabidb .section-background-image {
+            background-image: var(--image-section-xabidb-mobile);
+        }
+
+    /* ---- NAVBAR ----- */
+    .navbar-item {
+        margin: 10px 0;
+    }
+
+        .navbar-item-icon {
+            width: 10px;
+        }
+}
