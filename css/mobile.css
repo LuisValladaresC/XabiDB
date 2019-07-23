@@ -73,6 +73,27 @@
         font-size: 8px;
     }
 
+    #background-image.culture {
+        background-image: var(--image-section-culture-mobile);
+    }
+    #background-image.track_planner {
+        background-image: var(--image-section-track-planner-mobile);
+    }
+    #background-image.spin_trowel {
+        background-image: var(--image-section-spin-trowel-mobile);
+        background-position-y: bottom;
+        animation: movimiento2 800ms;
+    }
+    #background-image.oiz_it {
+        background-image: var(--image-section-oiz-it-mobile);
+    }
+    #background-image.onda {
+        background-image: var(--image-section-onda-mobile);
+    }
+    #background-image.xavidb {
+        background-image: var(--image-section-xabidb-mobile);
+    }
+
     /* ---- HEADER ----- */
     .header-menu {
         display: block;
@@ -101,29 +122,6 @@
 
         .section-link {
             font-size: 1.6em;
-        }
-
-        #culture .section-background-image {
-            background-image: var(--image-section-culture-mobile);
-        }
-        #track_planner .section-background-image {
-            background-image: var(--image-section-track-planner-mobile);
-        }
-        #spin_trowel .section-background-image {
-            background-image: var(--image-section-spin-trowel-mobile);
-            background-position-y: bottom;
-        }
-            #spin_trowel.active .section-background-image {
-                animation: movimiento2 800ms;
-            }
-        #oiz_it .section-background-image {
-            background-image: var(--image-section-oiz-it-mobile);
-        }
-        #onda .section-background-image {
-            background-image: var(--image-section-onda-mobile);
-        }
-        #xabidb .section-background-image {
-            background-image: var(--image-section-xabidb-mobile);
         }
 
     /* ---- NAVBAR ----- */

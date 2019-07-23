@@ -1,37 +1,48 @@
-const sections = Array.from(document.querySelectorAll('section'));
+
 const navbar = document.getElementById('navbar');
 const footer_text = document.querySelector('.footer-text');
+const sections = Array.from(document.querySelectorAll('section'));
 
-cargar_datos();
 window.addEventListener('popstate', cargar_datos);
 
 function cargar_datos() {
-    var centinela;
-
+    let centinela;
+    // Itera sobre cada una de las secciones y verifica si su id esta contenido dentro la url del navegador, en cuyo caso la mostrara
     sections.map((section, indice) => {
         if (document.location.href.includes(section.id)) {
             centinela = true
+            // Agrega la clase active a la seccion cuyo id se encuentra en la url y al navbar item que hace referencia mediante su indice
             section.classList.add('active');
-            // setTimeout(() => section.classList.add('rsu'), 1);
             navbar.children[indice].classList.add('active');
-
+            // Remueve y agrega los elementos background_color y background_image de su contendor body para asi repetir la animacion definida en sus estilos
+            let backgroundColor = document.getElementById('background-color');
+            let backgroundImage = document.getElementById('background-image');
+            backgroundColor.remove;
+            backgroundImage.remove;
+            document.body.appendChild(backgroundColor)
+            document.body.appendChild(backgroundImage)
+            // Añade una clase a los elementos background_color y background_image que tiene el nombre del id de la seccion y define su color e imagen de fondo
+            backgroundColor.classList = section.id;
+            backgroundImage.classList = section.id;
+            // Si la seccion actual no es la 1ra añade una clase 'invisible' al texto en el footer
             if (indice > 0) footer_text.classList.add('invisible')
             else footer_text.classList.remove('invisible')
         } else {
+            // Elimina la posible clase active en la seccion y en el navbar item que hace referencia mediante su indice
             section.classList = '';
             navbar.children[indice].classList.remove('active');
         }
     });
 
+    // Si la url de la pagina no tiene asignado ningun id de seccion definira la clase active en la seccion por defecto (culture)
     if (!centinela) {
         sections[0].classList.add('active');
         navbar.children[0].classList.add('active');
     }
-}
+}cargar_datos();
 
 window.addEventListener('wheel', redireccionURL);
 window.addEventListener('keydown', redireccionURL);
-// window.addEventListener("touchmove", (e) => {});
 
 function redireccionURL(e) {
     window.removeEventListener('wheel', redireccionURL)

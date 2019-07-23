@@ -15,62 +15,6 @@ section.active {
     display: grid;
 }
 
-    .section-background {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: -1;
-    }
-    #culture .section-background {
-        background-color: var(--color-section-culture);
-    }
-    #track_planner .section-background {
-        background-color: var(--color-section-track-planner);
-    }
-    #spin_trowel .section-background {
-        background-color: var(--color-section-spin-trowel);
-    }
-    #oiz_it .section-background {
-        background-color: var(--color-section-oiz-it);
-    }
-    #onda .section-background {
-        background-color: var(--color-section-onda);
-    }
-    #xabidb .section-background {
-        background-color: var(--color-section-xabidb);
-    }
-
-    .section-background-image {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 100;
-
-        background-position-x: center;
-        background-position-y: center;
-        background-repeat: no-repeat;
-        background-size: cover; 
-    }
-    #culture .section-background-image {
-        background-image: var(--image-section-culture);
-    }
-    #track_planner .section-background-image {
-        background-image: var(--image-section-track-planner);
-    }
-    #spin_trowel .section-background-image {
-        background-image: var(--image-section-spin-trowel);
-    }
-    #oiz_it .section-background-image {
-        background-image: var(--image-section-oiz-it);
-    }
-    #onda .section-background-image {
-        background-image: var(--image-section-onda);
-    }
-    #xabidb .section-background-image {
-        background-image: var(--image-section-xabidb);
-        background-position-y: bottom;
-    }
-
     .section-title {
         color: white;
         text-transform: uppercase;
@@ -82,6 +26,10 @@ section.active {
         padding: 0.33em 0;
         box-sizing: border-box;
         margin: 0;
+    }
+    section.active .section-title,
+    section.active .section-link {
+        animation: opacidad2 2s;
     }
 
     @media (max-width: 1181px) {
@@ -106,48 +54,3 @@ section.active {
         position: relative;
         z-index: 200;
     }
-
-/* ------- ANIMACIONES ------- */
-
-section.active .section-background{
-    animation: opacidad 2s;
-}
-
-section.active .section-title,
-section.active .section-link {
-    animation: opacidad2 2s;
-}
-
-@keyframes opacidad {
-    0% {
-        opacity: 0.7;
-    }
-}
-@keyframes opacidad2 {
-    0% {
-        opacity: 0;
-    }
-}
-
-section.active .section-background-image {
-    animation: movimiento 800ms;
-}
-
-
-#xabidb.active .section-background-image {
-    animation: movimiento2 800ms;
-}
-
-@keyframes movimiento {
-    0% {
-        opacity: 0;
-        background-position-y: 40%;
-    }
-}
-
-@keyframes movimiento2 {
-    0% {
-        opacity: 0;
-        background-position-y: 90%;
-    }
-}
