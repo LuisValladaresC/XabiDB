@@ -29,7 +29,11 @@ section.active {
     }
     section.active .section-title,
     section.active .section-link {
-        animation: opacidad2 2s;
+        animation: mostrar_texto 2s;
+    }
+
+    @keyframes mostrar_texto {
+        0% { opacity: 0 }
     }
 
     @media (max-width: 1181px) {

@@ -31,7 +31,7 @@ body {
     position: absolute;
     z-index: -1;
 
-    animation: opacidad 2s;
+    animation: opacidad 2s forwards;
 }
 
 #background-image {
@@ -45,7 +45,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 
-    animation: movimiento 800ms;
+    animation: movimiento 800ms forwards;
 }
 
 #background-color.culture {
@@ -84,8 +84,7 @@ body {
 }
 #background-image.xabidb {
     background-image: var(--image-section-xabidb);
-    background-position-y: bottom;
-    animation: movimiento2 800ms;
+    animation: movimiento2 800ms forwards;
 }
 
 /* ------- ANIMACIONES ------- */
@@ -95,23 +94,25 @@ body {
         opacity: 0.7;
     }
 }
-@keyframes opacidad2 {
-    0% {
-        opacity: 0;
-    }
-}
-
 
 @keyframes movimiento {
-    0% {
+    from {
         opacity: 0;
         background-position-y: 40%;
+    }
+    to {
+        opacity: 1;
+        background-position-y: center;
     }
 }
 
 @keyframes movimiento2 {
-    0% {
+    from {
         opacity: 0;
         background-position-y: 90%;
+    }
+    to {
+        opacity: 1;
+        background-position-y: bottom;
     }
 }
