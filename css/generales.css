@@ -11,21 +11,28 @@ h1 {
 }
 
 body {
-    height: 100vh;
+    height: 100vh; /* */
     width: 100vw;
+}
+
+section {
+    height: inherit;
+    width: inherit;
     max-width: 1800px;
     margin: 0 auto;
-    overflow: hidden;
 
     padding: 1.88rem;
     box-sizing: border-box;
     position: relative;
 
-    display: grid;
+    display: none;
     grid-template: auto 1fr auto / 1fr auto;
 }
+section.active {
+    display: grid;
+}
 
-#background-color {
+.section-color {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -34,7 +41,7 @@ body {
     animation: opacidad 2s forwards;
 }
 
-#background-image {
+.section-image {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -48,41 +55,41 @@ body {
     animation: movimiento 800ms forwards;
 }
 
-#background-color.culture {
+#culture .section-color {
     background-color: var(--color-section-culture);
 }
-#background-color.track_planner {
+#track_planner .section-color {
     background-color: var(--color-section-track-planner);
 }
-#background-color.spin_trowel {
+#spin_trowel .section-color {
     background-color: var(--color-section-spin-trowel);
 }
-#background-color.oiz_it {
+#oiz_it .section-color {
     background-color: var(--color-section-oiz-it);
 }
-#background-color.onda {
+#onda .section-color {
     background-color: var(--color-section-onda);
 }
-#background-color.xabidb {
+#xabidb .section-color {
     background-color: var(--color-section-xabidb);
 }
 
-#background-image.culture {
+#culture .section-image {
     background-image: var(--image-section-culture);
 }
-#background-image.track_planner {
+#track_planner .section-image {
     background-image: var(--image-section-track-planner);
 }
-#background-image.spin_trowel {
+#spin_trowel .section-image {
     background-image: var(--image-section-spin-trowel);
 }
-#background-image.oiz_it {
+#oiz_it .section-image {
     background-image: var(--image-section-oiz-it);
 }
-#background-image.onda {
+#onda .section-image {
     background-image: var(--image-section-onda);
 }
-#background-image.xabidb {
+#xabidb .section-image {
     background-image: var(--image-section-xabidb);
     animation: movimiento2 800ms forwards;
 }

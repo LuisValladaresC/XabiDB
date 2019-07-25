@@ -2,7 +2,7 @@
 			FOOTER
 \* --------------------------- */
 
-footer {
+.section-footer {
     grid-column: 2 span;
 
     display: flex;
@@ -10,7 +10,7 @@ footer {
     align-items: center;
 }
 
-    .footer-text {
+    .section-footer-text {
         font-size: 11.2px;
         font-weight: 300;
         color: rgba(255, 255, 255, 0.6);
@@ -20,11 +20,11 @@ footer {
         position: relative;
         z-index: 200;
     }
-    .footer-text.invisible {
+    .section-footer-text.invisible {
         opacity: 0;
     }
 
-    .footer-icon {
+    .section-footer-icon {
         width: 20px;
         position: relative;
         z-index: 200;

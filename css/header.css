@@ -2,17 +2,21 @@
 			HEADER
 \* --------------------------- */
 
-header {
+.section-header {
     grid-column: 2 span;
 
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 300;
 }
 
-    .header-logo {
-        width: 60px; /* */
+    .section-header-logo {
+        width: 60px;
+        vertical-align: top;
     }
     
-    .header-menu {
+    .section-header-menu {
         display: none;
     }

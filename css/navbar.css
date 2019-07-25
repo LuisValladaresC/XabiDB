@@ -2,11 +2,11 @@
 			NAVBAR
 \* --------------------------- */
 
-#navbar {
+.section-navbar {
     align-self: center;
 }
 
-    .navbar-item {
+    .section-navbar-item {
         margin: 12px 0;
 
         display: flex;
@@ -16,16 +16,15 @@
         z-index: 200;
     }
 
-        .navbar-item-icon {
+        .section-item-icon {
             width: 12px;
             opacity: 0.6;
             transition: 200ms;
         }
-        .navbar-item-icon:hover {
+        .section-item-icon:hover {
             opacity: 0.8;
         }
-
-        .active .navbar-item-icon {
+        .section-navbar-item.active .section-item-icon {
             opacity: 1;
             transform: scale(1.25) rotate(45deg);
         }
