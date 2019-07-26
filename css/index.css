@@ -6,4 +6,5 @@
 @import './navbar.css';
 @import './footer.css';
 @import './mobile.css';
-/* @import './presentation.css'; */
+@import './presentation.css';
+@import './presentation-mobile.css';

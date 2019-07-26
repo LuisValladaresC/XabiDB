@@ -5,10 +5,8 @@
 :root {
 	/* Colors */
 	--color-black: #000000;
-	--color-darkgray: #5a6268;
-	--color-gray: #6c757d;
-	--color-lightgray: #bec7d5;
-	--color-white: #ffffff;
+	--color-gray: #E0E0E0;
+	--color-white: #FFFFFF;
 	
 	--color-section-culture: #3CA562;
 	--color-section-track-planner: #017EFE;

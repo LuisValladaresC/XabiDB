@@ -19,4 +19,9 @@
     
     .section-header-menu {
         display: none;
+
+        transition: 200ms;
+    }
+    .section-header-menu:hover {
+        transform: scale(0.9)
     }
