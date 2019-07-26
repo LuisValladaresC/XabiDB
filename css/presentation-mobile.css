@@ -1,5 +1,18 @@
 @media (max-width: 768px) {
     /* ----------------- *\
+    \* --- GENERALES --- */
+
+    .arrows .up {
+        width: 90px !important;
+    }
+
+    .arrows .left,
+    .arrows .right {
+        height: 90px;
+        margin-bottom: 1.7rem;
+    }
+
+    /* ----------------- *\
     \* ----- HERO ------ */
 
     #hero {
@@ -54,10 +67,6 @@
         margin-bottom: 25px;
     }
 
-    .presentation .section-hero-link {
-        display: none;
-    }
-
     .presentation p {
         font-size: 2.2rem;
     }
@@ -70,6 +79,11 @@
     }    
     .decoration-bottom {
         border-top-width: 50px;
+    }
+
+    .arrows .left,
+    .arrows .right {
+        margin-bottom: 42px;
     }
 
     /* ----------------- *\
@@ -150,7 +164,7 @@
     }
     
         #picture_1 img {
-            content: url('../images/presentation/culture-image-mobile-1.png');
+            content: url('../images/culture/culture-image-mobile-1.png');
         }
     
     #picture_2 {
@@ -160,7 +174,7 @@
     
         #picture_2 img {
             margin: 0;
-            content: url('../images/presentation/culture-image-mobile-2.png');
+            content: url('../images/culture/culture-image-mobile-2.png');
         }
 
     /* ----------------- *\
@@ -186,14 +200,17 @@
         padding: 85px 8px;
         padding-top: 0;
     }
+    #picture_5 {
+        padding-bottom: 8px;
+    }
 
-        #picture_3 img {
-            content: url('../images/presentation/culture-image-mobile-3.png');
+        #picture_3 .picture-image {
+            content: url('../images/culture/culture-image-mobile-3.png');
         }
-        #picture_4 img {
-            content: url('../images/presentation/culture-image-mobile-4.png');
+        #picture_4 .picture-image {
+            content: url('../images/culture/culture-image-mobile-4.png');
         }
-        #picture_5 img {
-            content: url('../images/presentation/culture-image-mobile-5.png');
+        #picture_5 .picture-image {
+            content: url('../images/culture/culture-image-mobile-5.png');
         }
 }

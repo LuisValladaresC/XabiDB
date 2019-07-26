@@ -68,7 +68,7 @@ function redireccionURL(e) {
             break;
     }
 
-    setTimeout(() => window.addEventListener('wheel', redireccionURL), 100);
+    setTimeout(() => window.addEventListener('wheel', redireccionURL), 150);
 }
 
 /* -------------------------------------------------------------------------------------------------- */

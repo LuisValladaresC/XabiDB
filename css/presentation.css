@@ -6,28 +6,14 @@
 \* --- GENERALES --- */
 
 body.presentation {
-    height: auto;
     width: 100%;
 
     overflow-x: hidden;
 }
 
-    .presentation section.active {
-        min-height: 100vh;
-    }
-
         .presentation .section-footer {
             margin-bottom: 15px;
         }
-
-    .presentation .section-hero-link {
-        border-radius: 0;
-        
-        transform: skewX(-10deg)
-    }
-    .presentation .section-hero-link div {
-        transform: skewX(10deg)
-    }
 
 .presentation p {
     font-size: 0.97rem;
@@ -80,6 +66,58 @@ section.active .decoration-bottom {
 .presentation .xabidb {
     background-color: var(--color-section-xabidb);
 }
+
+.arrows {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    grid-template-areas: "down down" "left right" "up up";
+    align-items: center;
+}
+
+    .arrows * {
+        transition: 200ms;
+        cursor: pointer;
+    }
+    .arrows *:hover {
+        transform: scale(0.95)
+    }
+
+    .arrows .up {
+        grid-area: up;
+        align-self: flex-end;
+
+        width: 130px !important;
+        margin: 0 auto;
+    }
+
+    .arrows .left {
+        grid-area: left;
+        justify-self: flex-start;
+
+        height: 130px;
+        width: auto !important;
+        margin-bottom: 3.44rem;
+    }
+
+    .arrows .right {
+        grid-area: right;
+        justify-self: flex-end;
+        
+        height: 130px;
+        width: auto !important;
+        margin-bottom: 3.44rem;
+    }
+
+        .arrows img {
+            width: inherit;
+            height: inherit;
+        }
 
 /* ----------------- *\
 \* ----- HERO ------ */
@@ -222,10 +260,12 @@ section.active .decoration-bottom {
     padding: 6.87rem;
     padding-top: 0;
     display: block;
+
+    position: relative;
 }
 
-    #picture_3 img, 
-    #picture_4 img,
-    #picture_5 img {
+    #picture_3 .picture-image, 
+    #picture_4 .picture-image,
+    #picture_5 .picture-image {
         width: 100%;
     }
