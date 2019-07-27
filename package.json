@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build-css": "postcss ./css/index.css -o ./css/index.min.css -w"
+    "build-css": "postcss ./css/dev/index.css -o ./css/index.min.css -w"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
