@@ -1,26 +1,23 @@
-/* --------------------------- *\
-		  PRESENTATION
-\* --------------------------- */
+@import './general/layout.css';
 
 /* ----------------- *\
 \* --- GENERALES --- */
 
-body.presentation {
-    width: 100%;
-
-    overflow-x: hidden;
+body {
+  width: 100%;
+  overflow-x: hidden;
 }
 
-        .presentation .section-footer {
-            margin-bottom: 15px;
-        }
+  .presentation .carousel-footer {
+      margin-bottom: 15px;
+  }
 
 .presentation p {
     font-size: 0.97rem;
     text-align: justify;
     line-height: 1.2;
 }
-p.section-footer-text {
+p.carousel-footer-text {
     font-size: 11.2px;
 }
 
@@ -44,7 +41,7 @@ p.section-footer-text {
     bottom: -1px;
     left: 0;
 }
-section.active .decoration-bottom {
+.carousel.active .decoration-bottom {
     z-index: 300;
 }
 
@@ -187,6 +184,7 @@ section.active .decoration-bottom {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+    position: relative;
 }
 
     .logotype-content-description {
@@ -227,6 +225,7 @@ section.active .decoration-bottom {
     padding-bottom: calc(100% / 1.6);
 
     display: block;
+    position: relative;
 }
 
     #picture_2 img {
@@ -269,3 +268,224 @@ section.active .decoration-bottom {
     #picture_5 .picture-image {
         width: 100%;
     }
+
+/* --------------------------------- */
+/* --------- MEDIA QUERIES --------- */
+/* --------------------------------- */
+
+  @media (max-width: 768px) {
+  /* ----------------- *\
+  \* --- GENERALES --- */
+
+  .arrows .up {
+    width: 90px !important;
+  }
+
+  .arrows .left,
+  .arrows .right {
+    height: 90px;
+    margin-bottom: 1.7rem;
+  }
+
+  /* ----------------- *\
+  \* ----- HERO ------ */
+
+  #hero {
+    padding: 5.75rem 0;
+  }
+
+    .hero-description {
+      padding: 0 4.68rem 3.75rem;
+      grid-column-gap: 4rem;
+    }
+
+      .hero-card-title {
+        margin-right: 1.9rem;
+      }
+
+      .hero-images {
+        padding: 0 3.4rem;
+        grid-gap: 0.93rem;
+      }
+
+  /* ----------------- *\
+  \* --- LOGOTYPE ---- */
+
+  #logotype {
+    padding: 9rem 7.05rem;
+  }
+
+  /* ----------------- *\
+  \* ---- DETAILS ---- */
+
+  #details {
+    padding: 15% 3.4rem;
+    grid-column-gap: 2.5rem;
+  }
+
+  /* ------------------ *\
+  \* - PICTURES 3,4,5 - */
+
+  #picture_3, 
+  #picture_4,
+  #picture_5 {
+    padding: 3.4rem;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  /* ----------------- *\
+  \* --- GENERALES --- */
+
+  .presentation .carousel-footer {
+    margin-bottom: 25px;
+  }
+
+  .presentation p {
+    font-size: 2.2rem;
+  }
+  p.carousel-footer-text {
+    font-size: 9.6px;
+  }
+
+  .decoration-top {
+    border-bottom-width: 50px;
+  }    
+  .decoration-bottom {
+    border-top-width: 50px;
+  }
+
+  .arrows .left,
+  .arrows .right {
+    margin-bottom: 42px;
+  }
+
+  /* ----------------- *\
+  \* ----- HERO ------ */
+
+  #hero {
+    padding: 150px 0;
+  }
+
+    .hero-description {
+      grid-template: auto auto / 1fr;
+      padding: 0 0.1rem 150px;
+      grid-row-gap: 25px;
+    }
+
+      .hero-card-title {
+        display: none
+      }
+
+    .hero-images {
+      padding: 0 8px;
+      grid-template: minmax(auto, 110px) minmax(auto, 158px) minmax(auto, 245px) minmax(auto, 66px) / 1fr 1fr 1fr; 
+      grid-column-gap: 10px;
+      grid-row-gap: 18px;
+    }
+
+      .hero-images-item.col-2-xs {
+        grid-column: 2 span;
+        grid-row-start: 3;
+      }
+      .hero-images-item.col-2-xs-second {
+        grid-column: 2 span;
+        grid-row-start: 1;
+      }
+      .hero-images-item.col-3-xs {
+        grid-column: 3 span;
+        grid-row-start: 4;
+      }
+      .hero-images-item.row-4-xs {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 3;
+      }
+
+  /* ----------------- *\
+  \* --- LOGOTYPE ---- */
+
+  #logotype {
+    padding: 150px 0;
+    grid-template-columns: 1fr;
+  }
+
+    .logotype-content-description {
+      padding: 0 0.1rem;
+    }
+
+    .logotype-content-image {
+      grid-row-start: 1;
+      margin-left: 0; 
+      
+      width: calc(100% - 30px);
+      height: auto;
+      vertical-align: top;
+
+
+      justify-self: center;
+      align-self: center;
+    }
+
+  /* ----------------- *\
+  \* - PICTURES 1,2 -- */
+
+  #picture_1 {
+    height: auto;
+    padding: 150px 8px;
+
+    display: block;
+  }
+  
+    #picture_1 img {
+      content: url('../assets/img/culture/culture-image-mobile-1.png');
+    }
+  
+  #picture_2 {
+    height: auto;
+    padding: 150px 8px;
+  }
+  
+    #picture_2 img {
+      margin: 0;
+      content: url('../assets/img/culture/culture-image-mobile-2.png');
+    }
+
+  /* ----------------- *\
+  \* ---- DETAILS ---- */
+
+  #details {
+    padding: 150px 0.1rem;
+
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+
+    .details-card {
+      margin: 0;
+    }
+
+  /* ------------------ *\
+  \* - PICTURES 3,4,5 - */
+
+  #picture_3, 
+  #picture_4,
+  #picture_5 {
+    padding: 85px 8px;
+    padding-top: 0;
+  }
+  #picture_5 {
+    padding-bottom: 8px;
+  }
+
+    #picture_3 .picture-image {
+      content: url('../assets/img/culture/culture-image-mobile-3.png');
+    }
+    #picture_4 .picture-image {
+      content: url('../assets/img/culture/culture-image-mobile-4.png');
+    }
+    #picture_5 .picture-image {
+      content: url('../assets/img/culture/culture-image-mobile-5.png');
+    }
+}

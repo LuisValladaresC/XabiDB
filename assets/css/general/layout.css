@@ -1,0 +1,52 @@
+/* --------------------------------- */
+/* -------- ESTILOS GLOBALES ------- */
+/* --------------------------------- */
+
+@import './normalize.css';
+@import './variables.css';
+
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,500,600,700&display=swap');
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* ------- ANIMACIONES ------- */
+
+@keyframes opacidad {
+  0% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes movimiento {
+  from {
+    opacity: 0;
+    background-position-y: 40%;
+  }
+  to {
+    opacity: 1;
+    background-position-y: center;
+  }
+}
+
+@keyframes movimiento2 {
+  from {
+    opacity: 0;
+    background-position-y: 90%;
+  }
+  to {
+    opacity: 1;
+    background-position-y: bottom;
+  }
+}
