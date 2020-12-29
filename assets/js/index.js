@@ -2,7 +2,7 @@
 /* DEFINE LA SECCION QUE MOSTRARA EL HOME APLICANDO Y REMOVIENDO LA CLASE ACTIVE CUANDO CAMBIA LA URL */
 /* -------------------------------------------------------------------------------------------------- */
 
-const sections = Array.from(document.querySelectorAll('section'));
+const sections = Array.from(document.querySelectorAll('.hero'));
 
 window.addEventListener('popstate', cargar_datos);
 
@@ -13,16 +13,16 @@ function cargar_datos() {
         if (document.location.href.includes(section.id)) {
             centinela = true
             // Agrega la clase active a la seccion cuyo id se encuentra en la url
-            section.classList.add('active');
+            section.parentElement.classList.add('active');
         } else {
             // Elimina la posible clase active en la seccion
-            section.classList.remove('active');
+            section.parentElement.classList.remove('active');
         }
     });
 
     // Si la url de la pagina no tiene asignado ningun id de seccion definira la clase active en la seccion por defecto (culture)
     if (!centinela) {
-        sections[0].classList.add('active');
+        sections[0].parentElement.classList.add('active');
     }
 }cargar_datos();
 
@@ -39,7 +39,7 @@ window.addEventListener('touchend', redireccionURL);
 
 function redireccionURL(e) {
     window.removeEventListener('wheel', redireccionURL)
-    const seccionActual = document.querySelector('section.active')
+    const seccionActual = document.querySelector('.active .hero')
     
     if (e.type == 'touchend') var touchFinal = e.changedTouches[0].clientY;
 

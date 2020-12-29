@@ -1,4 +1,4 @@
-@import './general/layout.css';
+@import './index.css';
 
 /* ----------------- *\
 \* --- GENERALES --- */
@@ -8,60 +8,13 @@ body {
   overflow-x: hidden;
 }
 
-  .presentation .carousel-footer {
-      margin-bottom: 15px;
-  }
-
-.presentation p {
+p {
     font-size: 0.97rem;
     text-align: justify;
     line-height: 1.2;
 }
-p.carousel-footer-text {
+p.hero-footer-text {
     font-size: 11.2px;
-}
-
-.decoration-top {
-    border-left: 100vw solid var(--color-white);
-    border-bottom: 3.12rem solid transparent;
-
-    position: absolute;
-    top: -1px;
-    left: 0;
-}
-#hero .decoration-top {
-    border-left-color: var(--color-section-culture);
-}
-
-.decoration-bottom {
-    border-top: 3.12rem solid transparent;
-    border-right: 100vw solid var(--color-white);
-
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-}
-.carousel.active .decoration-bottom {
-    z-index: 300;
-}
-
-.presentation .culture{
-    background-color: var(--color-section-culture);
-}
-.presentation .track_planner {
-    background-color: var(--color-section-track-planner);
-}
-.presentation .spin_trowel {
-    background-color: var(--color-section-spin-trowel);
-}
-.presentation .oiz_it {
-    background-color: var(--color-section-oiz-it);
-}
-.presentation .onda {
-    background-color: var(--color-section-onda);
-}
-.presentation .xabidb {
-    background-color: var(--color-section-xabidb);
 }
 
 .arrows {
@@ -119,7 +72,7 @@ p.carousel-footer-text {
 /* ----------------- *\
 \* ----- HERO ------ */
 
-#hero {
+#main {
     padding: 7.5rem 0;
     height: auto;
 
@@ -127,7 +80,7 @@ p.carousel-footer-text {
     flex-direction: column;
 }
 
-    .hero-description {
+    .main-description {
         padding: 0 9.37rem 7.5rem;
         padding-top: 0;
 
@@ -136,11 +89,11 @@ p.carousel-footer-text {
         grid-column-gap: 5rem;
     }
 
-        .hero-description-card {
+        .main-description-card {
             display: flex;
         }
 
-            .hero-card-title {
+            .main-card-title {
                 margin: 0;
                 margin-right: 3.75rem;
 
@@ -150,11 +103,11 @@ p.carousel-footer-text {
                 font-size: 1.1rem;
             }
 
-            .hero-card-text {
+            .main-card-text {
                 margin: 0;
             }
 
-    .hero-images {
+    .main-images {
         padding: 0 6.87rem;
 
         display: grid;
@@ -162,16 +115,16 @@ p.carousel-footer-text {
         grid-gap: 1.87rem;
     }
 
-        .hero-images-item {
+        .main-images-item {
             width: 100%;
             height: 100%;
 
             object-fit: cover;
         }
-        .hero-images-item.row-2 {
+        .main-images-item.row-2 {
             grid-row: 2 span;
         }
-        .hero-images-item.col-4 {
+        .main-images-item.col-4 {
             grid-column: 4 span;
         }
 
@@ -186,6 +139,25 @@ p.carousel-footer-text {
     grid-template-columns: 1fr 1fr;
     position: relative;
 }
+
+  .culture{
+    background-color: var(--color-section-culture);
+  }
+  .track_planner {
+    background-color: var(--color-section-track-planner);
+  }
+  .spin_trowel {
+    background-color: var(--color-section-spin-trowel);
+  }
+  .oiz_it {
+    background-color: var(--color-section-oiz-it);
+  }
+  .onda {
+    background-color: var(--color-section-onda);
+  }
+  .xabidb {
+    background-color: var(--color-section-xabidb);
+  }
 
     .logotype-content-description {
         color: var(--color-white);
@@ -290,20 +262,20 @@ p.carousel-footer-text {
   /* ----------------- *\
   \* ----- HERO ------ */
 
-  #hero {
+  #main {
     padding: 5.75rem 0;
   }
 
-    .hero-description {
+    .main-description {
       padding: 0 4.68rem 3.75rem;
       grid-column-gap: 4rem;
     }
 
-      .hero-card-title {
+      .main-card-title {
         margin-right: 1.9rem;
       }
 
-      .hero-images {
+      .main-images {
         padding: 0 3.4rem;
         grid-gap: 0.93rem;
       }
@@ -338,22 +310,15 @@ p.carousel-footer-text {
   /* ----------------- *\
   \* --- GENERALES --- */
 
-  .presentation .carousel-footer {
+  .hero-footer {
     margin-bottom: 25px;
   }
 
-  .presentation p {
+  p {
     font-size: 2.2rem;
   }
-  p.carousel-footer-text {
+  p.hero-footer-text {
     font-size: 9.6px;
-  }
-
-  .decoration-top {
-    border-bottom-width: 50px;
-  }    
-  .decoration-bottom {
-    border-top-width: 50px;
   }
 
   .arrows .left,
@@ -364,40 +329,40 @@ p.carousel-footer-text {
   /* ----------------- *\
   \* ----- HERO ------ */
 
-  #hero {
+  #main {
     padding: 150px 0;
   }
 
-    .hero-description {
+    .main-description {
       grid-template: auto auto / 1fr;
       padding: 0 0.1rem 150px;
       grid-row-gap: 25px;
     }
 
-      .hero-card-title {
+      .main-card-title {
         display: none
       }
 
-    .hero-images {
+    .main-images {
       padding: 0 8px;
       grid-template: minmax(auto, 110px) minmax(auto, 158px) minmax(auto, 245px) minmax(auto, 66px) / 1fr 1fr 1fr; 
       grid-column-gap: 10px;
       grid-row-gap: 18px;
     }
 
-      .hero-images-item.col-2-xs {
+      .main-images-item.col-2-xs {
         grid-column: 2 span;
         grid-row-start: 3;
       }
-      .hero-images-item.col-2-xs-second {
+      .main-images-item.col-2-xs-second {
         grid-column: 2 span;
         grid-row-start: 1;
       }
-      .hero-images-item.col-3-xs {
+      .main-images-item.col-3-xs {
         grid-column: 3 span;
         grid-row-start: 4;
       }
-      .hero-images-item.row-4-xs {
+      .main-images-item.row-4-xs {
         grid-row-start: 1;
         grid-row-end: 4;
         grid-column-start: 3;
