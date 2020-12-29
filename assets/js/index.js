@@ -1,68 +1,69 @@
-/* -------------------------------------------------------------------------------------------------- */
-/* DEFINE LA SECCION QUE MOSTRARA EL HOME APLICANDO Y REMOVIENDO LA CLASE ACTIVE CUANDO CAMBIA LA URL */
-/* -------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------ */
+/* ---------------- FUNCIONALIDAD DEL CARRUSEL ---------------- */
+/* ------------------------------------------------------------ */
 
-const sections = Array.from(document.querySelectorAll('.hero'));
+const $slides = Array.from(document.querySelectorAll('.carousel-item .hero'));
 
-window.addEventListener('popstate', cargar_datos);
+var $currentSlide;
+var initialTouchPosition;
+var finishingTouchPosition
 
-function cargar_datos() {
-    let centinela;
-    // Itera sobre cada una de las secciones y verifica si su id esta contenido dentro la url del navegador, en cuyo caso la mostrara
-    sections.map(section => {
-        if (document.location.href.includes(section.id)) {
-            centinela = true
-            // Agrega la clase active a la seccion cuyo id se encuentra en la url
-            section.parentElement.classList.add('active');
-        } else {
-            // Elimina la posible clase active en la seccion
-            section.parentElement.classList.remove('active');
-        }
-    });
-
-    // Si la url de la pagina no tiene asignado ningun id de seccion definira la clase active en la seccion por defecto (culture)
-    if (!centinela) {
-        sections[0].parentElement.classList.add('active');
-    }
-}cargar_datos();
-
-/* -------------------------------------------------------------------------------------------- */
-/* DEFINE LOS EVENTOS (SCROLL, TECLAS ▲ ▼ & TOUCH ▲ ▼) QUE CAMBIARAN EL ID AL QUE APUNTA LA URL */
-/* -------------------------------------------------------------------------------------------- */
-
-window.addEventListener('wheel', redireccionURL);
-window.addEventListener('keydown', redireccionURL);
-
-var touchInitial;
+window.addEventListener('popstate', showCarouselSlide);
 window.addEventListener('touchstart', e => touchInitial = e.touches[0].clientY);
-window.addEventListener('touchend', redireccionURL);
+window.addEventListener('touchend', redirectURL);
+window.addEventListener('keydown', redirectURL);
 
-function redireccionURL(e) {
-    if (e.type == 'wheel') window.removeEventListener('wheel', redireccionURL)
-    let seccionActual = document.querySelector('.active .hero')
-    
-    if (e.type == 'touchend') var touchFinal = e.changedTouches[0].clientY;
+showCarouselSlide();
 
-    switch (seccionActual.id) {
-        case 'culture':
-            if (e.deltaY > 0 || e.keyCode == 40 || touchInitial > touchFinal + 5) document.location.href = '#spin_trowel'
-            break;
-        case 'spin_trowel':
-            if (e.deltaY < 0 || e.keyCode == 38 || touchInitial < touchFinal - 5) document.location.href = '#culture'
-            if (e.deltaY > 0 || e.keyCode == 40 || touchInitial > touchFinal + 5) document.location.href = '#orbea_oiz'
-            break;
-        case 'orbea_oiz':
-            if (e.deltaY < 0 || e.keyCode == 38 || touchInitial < touchFinal - 5) document.location.href = '#spin_trowel'
-            if (e.deltaY > 0 || e.keyCode == 40 || touchInitial > touchFinal + 5) document.location.href = '#onda_bench'
-            break;
-        case 'onda_bench':
-            if (e.deltaY < 0 || e.keyCode == 38 || touchInitial < touchFinal - 5) document.location.href = '#orbea_oiz'
-            if (e.deltaY > 0 || e.keyCode == 40 || touchInitial > touchFinal + 5) document.location.href = '#xabidb'
-            break;
-        case 'xabidb':
-            if (e.deltaY < 0 || e.keyCode == 38 || touchInitial < touchFinal - 5) document.location.href = '#onda_bench'
-            break;
+// Muestra una slide del carrusel segun el ID al que apunte la URL
+function showCarouselSlide() {
+  let slideLoaded = false;
+
+  $slides.map($slide => {
+    if (document.location.href.includes($slide.id)) {
+      slideLoaded = true
+      // Agrega la clase active a la seccion cuyo id se encuentra en la url
+      $slide.parentElement.classList.add('active');
+      $slide.addEventListener('wheel', redirectURL, true);
+      $currentSlide = $slide;
+    } else {
+      // Elimina la posible clase active en la seccion
+      $slide.parentElement.classList.remove('active');
+      $slide.removeEventListener('wheel', redirectURL)
     }
+  });
 
-    if (e.type == 'wheel') setTimeout(() => window.addEventListener('wheel', redireccionURL), 500);
+  // Si la url no tiene asignado ningun id mostrara el slide por defecto (culture)
+  if (!slideLoaded) {
+    $slides[0].parentElement.classList.add('active');
+    $slides[0].addEventListener('wheel', redirectURL, true);
+    $currentSlide = $slides[0];
+  }
+}
+
+// Modifica el ID al que apunta la URL como respuesta a: Scroll ▲ ▼, Nav Keys ▲ ▼ & Touch ▲ ▼
+function redirectURL(e) {
+  console.log($currentSlide.id)
+  if (e.type == 'touchend') finishingTouchPosition = e.changedTouches[0].clientY;
+
+  switch ($currentSlide.id) {
+    case 'culture':
+      if (e.deltaY > 0 || e.keyCode == 40 || initialTouchPosition > finishingTouchPosition + 5) document.location.href = '#spin_trowel'
+      break;
+    case 'spin_trowel':
+      if (e.deltaY < 0 || e.keyCode == 38 || initialTouchPosition < finishingTouchPosition - 5) document.location.href = '#culture'
+      if (e.deltaY > 0 || e.keyCode == 40 || initialTouchPosition > finishingTouchPosition + 5) document.location.href = '#orbea_oiz'
+      break;
+    case 'orbea_oiz':
+      if (e.deltaY < 0 || e.keyCode == 38 || initialTouchPosition < finishingTouchPosition - 5) document.location.href = '#spin_trowel'
+      if (e.deltaY > 0 || e.keyCode == 40 || initialTouchPosition > finishingTouchPosition + 5) document.location.href = '#onda_bench'
+      break;
+    case 'onda_bench':
+      if (e.deltaY < 0 || e.keyCode == 38 || initialTouchPosition < finishingTouchPosition - 5) document.location.href = '#orbea_oiz'
+      if (e.deltaY > 0 || e.keyCode == 40 || initialTouchPosition > finishingTouchPosition + 5) document.location.href = '#xabidb'
+      break;
+    case 'xabidb':
+      if (e.deltaY < 0 || e.keyCode == 38 || initialTouchPosition < finishingTouchPosition - 5) document.location.href = '#onda_bench'
+      break;
+  }
 }
