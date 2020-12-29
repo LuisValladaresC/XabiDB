@@ -38,35 +38,31 @@ window.addEventListener('touchstart', e => touchInitial = e.touches[0].clientY);
 window.addEventListener('touchend', redireccionURL);
 
 function redireccionURL(e) {
-    window.removeEventListener('wheel', redireccionURL)
-    const seccionActual = document.querySelector('.active .hero')
+    if (e.type == 'wheel') window.removeEventListener('wheel', redireccionURL)
+    let seccionActual = document.querySelector('.active .hero')
     
     if (e.type == 'touchend') var touchFinal = e.changedTouches[0].clientY;
 
     switch (seccionActual.id) {
         case 'culture':
-            if (e.deltaY > 0 || e.keyCode == 40 || touchInitial > touchFinal + 5) document.location.href = '#track_planner'
-            break;
-        case 'track_planner':
-            if (e.deltaY < 0 || e.keyCode == 38 || touchInitial < touchFinal - 5) document.location.href = '#culture'
             if (e.deltaY > 0 || e.keyCode == 40 || touchInitial > touchFinal + 5) document.location.href = '#spin_trowel'
             break;
         case 'spin_trowel':
-            if (e.deltaY < 0 || e.keyCode == 38 || touchInitial < touchFinal - 5) document.location.href = '#track_planner'
-            if (e.deltaY > 0 || e.keyCode == 40 || touchInitial > touchFinal + 5) document.location.href = '#oiz_it'
+            if (e.deltaY < 0 || e.keyCode == 38 || touchInitial < touchFinal - 5) document.location.href = '#culture'
+            if (e.deltaY > 0 || e.keyCode == 40 || touchInitial > touchFinal + 5) document.location.href = '#orbea_oiz'
             break;
-        case 'oiz_it':
+        case 'orbea_oiz':
             if (e.deltaY < 0 || e.keyCode == 38 || touchInitial < touchFinal - 5) document.location.href = '#spin_trowel'
-            if (e.deltaY > 0 || e.keyCode == 40 || touchInitial > touchFinal + 5) document.location.href = '#onda'
+            if (e.deltaY > 0 || e.keyCode == 40 || touchInitial > touchFinal + 5) document.location.href = '#onda_bench'
             break;
-        case 'onda':
-            if (e.deltaY < 0 || e.keyCode == 38 || touchInitial < touchFinal - 5) document.location.href = '#oiz_it'
+        case 'onda_bench':
+            if (e.deltaY < 0 || e.keyCode == 38 || touchInitial < touchFinal - 5) document.location.href = '#orbea_oiz'
             if (e.deltaY > 0 || e.keyCode == 40 || touchInitial > touchFinal + 5) document.location.href = '#xabidb'
             break;
         case 'xabidb':
-            if (e.deltaY < 0 || e.keyCode == 38 || touchInitial < touchFinal - 5) document.location.href = '#onda'
+            if (e.deltaY < 0 || e.keyCode == 38 || touchInitial < touchFinal - 5) document.location.href = '#onda_bench'
             break;
     }
 
-    setTimeout(() => window.addEventListener('wheel', redireccionURL), 150);
+    if (e.type == 'wheel') setTimeout(() => window.addEventListener('wheel', redireccionURL), 500);
 }

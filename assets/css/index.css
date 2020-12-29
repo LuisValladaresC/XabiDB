@@ -18,92 +18,80 @@
     display: initial;
   }
 
+/* --------------------------------- */
+/* -------------- HERO ------------- */
+/* --------------------------------- */
+
     .hero {
-      position: relative;
       height: inherit;
       width: inherit;
-      /* max-width: 1800px; */
       margin: 0 auto;
-
-      padding: 1.88rem;
+      padding: 2rem;
       box-sizing: border-box;
       position: relative;
-
       display: grid;
       grid-template: auto 1fr auto / 1fr auto;
     }
     #culture.hero {
       background-color: var(--color-section-culture);
     }
-    #track_planner.hero {
-      background-color: var(--color-section-track-planner);
-    }
     #spin_trowel.hero {
       background-color: var(--color-section-spin-trowel);
     }
-    #oiz_it.hero {
-      background-color: var(--color-section-oiz-it);
+    #orbea_oiz.hero {
+      background-color: var(--color-section-orbea-oiz);
     }
-    #onda.hero {
-      background-color: var(--color-section-onda);
+    #onda_bench.hero {
+      background-color: var(--color-section-onda-bench);
     }
     #xabidb.hero {
       background-color: var(--color-section-xabidb);
     }
 
-      /* -- Image -- */
+      /* -- Background Image -- */
       .hero-image {
         width: 100%;
         height: 100%;
         position: absolute;
-        z-index: 100;
-        
-        background-position-x: center;
-        background-position-y: center;
+        z-index: 300;
+        background-position: right bottom;
         background-repeat: no-repeat;
-        background-size: cover;
-
-        animation: movimiento 800ms forwards;
+        background-size: contain;
       }
       #culture .hero-image {
         background-image: var(--image-section-culture);
       }
-      #track_planner .hero-image {
-        background-image: var(--image-section-track-planner);
-      }
       #spin_trowel .hero-image {
         background-image: var(--image-section-spin-trowel);
       }
-      #oiz_it .hero-image {
+      #orbea_oiz .hero-image {
         background-image: var(--image-section-oiz-it);
       }
-      #onda .hero-image {
+      #onda_bench .hero-image {
         background-image: var(--image-section-onda);
       }
       #xabidb .hero-image {
         background-image: var(--image-section-xabidb);
-        animation: movimiento2 800ms forwards;
       }
 
       /* -- Header -- */
       .hero-header {
         grid-column: 2 span;
-      
         display: flex;
         justify-content: space-between;
-      
         position: relative;
         z-index: 300;
       }
       
         .hero-header-logo {
-          width: 60px;
+          width: 45px;
           vertical-align: top;
         }
         
         .hero-header-menu {
-          display: none;
-      
+          width: 45px;
+          vertical-align: top;
+          cursor: pointer;
           transition: 200ms;
         }
         .hero-header-menu:hover {
@@ -112,55 +100,28 @@
 
       /* -- Content -- */
       .hero-content {
-        padding: 6.9rem 4.4rem 0;
-        
-        display: grid;
-        align-content: flex-start;
-        justify-content: flex-start;
+        padding-top: 4em;
       }
 
-        .hero-content-title {
-          color: white;
-          text-transform: uppercase;
-          font-size: 7.6em;
-          letter-spacing: 1.2rem;
-          line-height: 1;
-          
-          transform: scaleY(1.66);
-          padding: 0.33em 0;
-          box-sizing: border-box;
-          margin: 0;
-
-          animation: mostrar_texto 2s;
-        }
-
-        @media (max-width: 1181px) {
-          #track_planner .hero-content-title {
-              padding: 0.66em 0;
-          }
+        .hero-content-image,
+        .hero-content-image-second {
+          margin-bottom: 1em;
+          width: auto;
+          z-index: 200;
         }
 
         .hero-content-link {
+          margin-top: 2em;
           color: white;
           font-size: 1.2em;
-          font-weight: 300;
+          font-weight: 100;
           text-decoration: none;
-
-          width: fit-content;
-          padding: 0.9rem;
-          padding-top: 0.75rem;
-
-          border-radius: 0.2rem;
-          border: 1px solid rgba(255, 255, 255, 0.6);
-
           position: relative;
-          z-index: 200;
-
-          animation: mostrar_texto 2s;
+          z-index: 400;
         }
 
-        @keyframes mostrar_texto {
-          0% { opacity: 0 }
+        #xabidb .hero-content-link {
+          color: #333333;
         }
 
       /* -- Sidebar -- */
@@ -169,17 +130,15 @@
       }
       
         .hero-sidebar-item {
-          margin: 12px 0;
-      
+          margin: 18px 0;
           display: flex;
-          justify-content: center;
-      
+          justify-content: flex-end;
           position: relative;
-          z-index: 200;
+          z-index: 400;
         }
       
           .hero-item-icon {
-            width: 12px;
+            width: 1em;
             opacity: 0.6;
             transition: 200ms;
           }
@@ -194,169 +153,440 @@
       /* -- Footer -- */
       .hero-footer {
         grid-column: 2 span;
-      
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
       }
-      
-        .hero-footer-text {
-          font-size: 11.2px;
-          font-weight: 300;
-          color: rgba(255, 255, 255, 0.6);
-      
-          margin: 0;
-          margin-bottom: 0.5em;
-          position: relative;
-          z-index: 200;
-        }
-        .hero-footer-text.invisible {
-          opacity: 0;
-        }
-      
+
         .hero-footer-icon {
-          width: 20px;
-          position: relative;
-          z-index: 200;
+          grid-column: 2;
+          justify-self: center;
+          width: 10px;
+          z-index: 400;
+          cursor: pointer;
+        }
+
+        .hero-footer-link {
+          grid-column: 3;
+          justify-self: flex-end;
+          color: white;
+          font-size: 1.2em;
+          font-weight: 100;
+          z-index: 400;
+          cursor: pointer;
+        }
+        #xabidb .hero-footer-link {
+          color: #333333;
         }
 
 /* --------------------------------- */
 /* --------- MEDIA QUERIES --------- */
 /* --------------------------------- */
 
-@media (max-width: 1024px) {
-  /* -- GENERAL -- */
-  html {
-    font-size: 13px;
-  }
-  
-  /* -- CAROUSEL -- */
-  .hero-content-title {
-    transform: scaleY(1.33);
-    padding: 0.15em 0;
-  }
-  #track_planner .hero-content-title {
-    padding: 0.15em 0;
-  }
-}
-
-@media (max-width: 962px) {
-  #track_planner .hero-content-title {
-    padding: 0.30em 0;
-  }
-}
-
-@media (max-width: 833px) {
-  #spin_trowel .hero-content-title {
-    padding: 0.30em 0;
-    z-index: 200;
-  }
-}
-
-@media (max-width: 768px) {
-  /* -- GENERAL -- */
-  html {
-    font-size: 10px;
-  }
-
-  .hero-header-logo {
-    width: 52px;
-  }
-
-  /* -- CAROUSEL -- */
-  .hero-content {
-    padding-top: 3.5rem;
-  }
-  
-    .hero-content-title {
-      transform: scaleY(1.1);
-      padding: 0.12em 0;
-    }
-    #track_planner .hero-content-title {
-      padding: 0.12em 0;
-    }
-    #spin_trowel .hero-content-title {
-      padding: 0.12em 0;
-    }
-
-  .hero-footer-text {
-    font-size: 9.6px;
-  }
-
-  .hero-footer-icon {
-    width: 17.4px;
-  }
-}
-
-@media (max-width: 580px) {
-  /* -- CAROUSEL -- */
-  .hero-content {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-}
-
-@media (max-width: 425px) {
-  /* -- GENERAL -- */
-  html {
-    font-size: 8px;
-  }
-
-  /* -- CAROUSEL -- */
+@media (min-width: 600px){
+  /* -- HERO -- */
+  /* -- Background Image -- */
   #culture .hero-image {
-    background-image: var(--image-section-culture-mobile);
-  }
-  #track_planner .hero-image {
-    background-image: var(--image-section-track-planner-mobile);
+    background-image: var(--image-section-culture-600);
   }
   #spin_trowel .hero-image {
-    background-image: var(--image-section-spin-trowel-mobile);
-    background-position-y: bottom;
-    animation: movimiento2 800ms;
+    background-image: var(--image-section-spin-trowel-600);
   }
-  #oiz_it .hero-image {
-    background-image: var(--image-section-oiz-it-mobile);
+  #orbea_oiz .hero-image {
+    background-image: var(--image-section-orbea-oiz-600);
   }
-  #onda .hero-image {
-    background-image: var(--image-section-onda-mobile);
+  #onda_bench .hero-image {
+    background-image: var(--image-section-onda-bench-600);
   }
-  #xavidb .hero-image {
-    background-image: var(--image-section-xabidb-mobile);
+
+  /* -- Header -- */
+  .hero-header-logo {
+    width: 45px;
   }
 
   .hero-header-menu {
-    display: block;
-    height: 30px;
-
-    align-self: center;
+    width: 45px;
   }
 
+  /* -- Content -- */
   .hero-content {
-    padding: 5rem 1.8rem 0;
+    padding-top: 8em;
   }
-
-    .hero-content-title {
-      font-size: 7em;
-      transform: scaleY(1.4);
-
-      padding-top: 0.5em;
-      padding-bottom: 0.25em;
-    }
-    #track_planner .hero-content-title,
-    #spin_trowel .hero-content-title {
-      padding-top: 0.72em;
-      padding-bottom: 0.45em;
-    }
 
     .hero-content-link {
-      font-size: 1.6em;
+      font-size: 1.4em;
     }
 
-  .hero-navbar-item {
-    margin: 10px 0;
+  /* -- Sidebar -- */
+  .hero-item-icon {
+    width: 1.2em;
   }
 
+  /* -- Footer -- */
+  .hero-footer-icon {
+    width: 12.5px;
+  }
+
+  .hero-footer-link {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 801px) and (orientation: portrait){
+  /* -- HERO -- */
+  .hero {
+    padding: 3rem;
+  }
+
+    /* -- Background Image -- */
+    #culture .hero-image {
+      background-image: var(--image-section-culture-801p);
+    }
+    #spin_trowel .hero-image {
+      background-image: var(--image-section-spin-trowel-801p);
+    }
+    #orbea_oiz .hero-image {
+      background-image: var(--image-section-orbea-oiz-801p);
+    }
+    #onda_bench .hero-image {
+      background-image: var(--image-section-onda-bench-801p);
+    }
+
+    /* -- Header -- */
+    .hero-header-logo {
+      width: 45px;
+    }
+
+    .hero-header-menu {
+      width: 45px;
+    }
+
+    /* -- Content -- */
+    .hero-content {
+      padding-top: 10em;
+    }
+
+      .hero-content-link {
+        font-size: 1.4em;
+      }
+
+    /* -- Sidebar -- */
     .hero-item-icon {
+      width: 1.2em;
+    }
+
+    /* -- Footer -- */
+    .hero-footer-icon {
+      width: 12.5px;
+    }
+
+    .hero-footer-link {
+      font-size: 1.2em;
+    }
+
+}
+
+@media (min-width: 801px) and (orientation: landscape){
+  /* -- HERO -- */
+  .hero {
+    padding: 3rem;
+  }
+
+    /* -- Background Image -- */
+    #culture .hero-image {
+      background-image: var(--image-section-culture-801);
+    }
+    #spin_trowel .hero-image {
+      background-image: var(--image-section-spin-trowel-801);
+    }
+    #orbea_oiz .hero-image {
+      background-image: var(--image-section-orbea-oiz-801);
+    }
+    #onda_bench .hero-image {
+      background-image: var(--image-section-onda-bench-801);
+    }
+
+    /* -- Header -- */
+    .hero-header-logo {
+      width: 45px;
+    }
+
+    .hero-header-menu {
+      width: 45px;
+    }
+
+    /* -- Content -- */
+    .hero-content {
+      padding-top: 6em;
+    }
+
+      .hero-content-image {
+        margin-bottom: 1em;
+        height: 12em;
+      }
+      #spin_trowel .hero-content-image {
+        content: url(../svg/spin_trowel.svg);
+      }
+      #orbea_oiz .hero-content-image {
+        content: url(../svg/orbea_oiz.svg);
+      }
+      #onda_bench .hero-content-image {
+        content: url(../svg/onda_bench.svg);
+      }
+
+      .hero-content-image-second {
+        margin-bottom: 1em;
+        width: 75%;
+      }
+      #spin_trowel .hero-content-image-second,
+      #orbea_oiz .hero-content-image-second,
+      #onda_bench .hero-content-image-second {
+        display: none;
+      }
+
+      .hero-content-link {
+        font-size: 1.2em;
+      }
+
+    /* -- Sidebar -- */
+    .hero-item-icon {
+      width: 1em;
+    }
+
+    /* -- Footer -- */
+    .hero-footer-icon {
       width: 10px;
+    }
+
+    .hero-footer-link {
+    font-size: 1.2em;
+    }
+  
+}
+
+@media (min-width: 1025px){
+  /* -- HERO -- */
+  .hero {
+    padding: 3rem;
+  }
+
+    /* -- Background Image -- */
+    #culture .hero-image {
+      background-image: var(--image-section-culture-1025);
+    }
+    #spin_trowel .hero-image {
+      background-image: var(--image-section-spin-trowel-1025);
+    }
+    #orbea_oiz .hero-image {
+      background-image: var(--image-section-orbea-oiz-1025);
+    }
+    #onda_bench .hero-image {
+      background-image: var(--image-section-onda-bench-1025);
+    }
+
+    /* -- Header -- */
+    .hero-header-logo {
+      width: 45px;
+    }
+
+    .hero-header-menu {
+      width: 45px;
+    }
+
+    /* -- Content -- */
+    .hero-content {
+      padding-top: 8em;
+    }
+
+      .hero-content-image {
+        margin-bottom: 1em;
+        height: 16em;
+      }
+      #spin_trowel .hero-content-image {
+        content: url(../svg/spin_trowel.svg);
+      }
+      #orbea_oiz .hero-content-image {
+        content: url(../svg/orbea_oiz.svg);
+      }
+      #onda_bench .hero-content-image {
+        content: url(../svg/onda_bench.svg);
+      }
+    
+      #spin_trowel .hero-content-image-second,
+      #orbea_oiz .hero-content-image-second,
+      #onda_bench .hero-content-image-second {
+        display: none;
+      }
+
+      .hero-content-link {
+        font-size: 1.2em;
+      }
+
+    /* -- Sidebar -- */
+    .hero-item-icon {
+      width: 1em;
+    }
+
+    /* -- Footer -- */
+    .hero-footer-link {
+      font-size: 1.2em;
+    }
+
+    .hero-footer-icon {
+      width: 10px;
+    }
+}
+
+@media (min-width: 1281px){
+  /* -- HERO -- */
+  .hero {
+    padding: 3rem;
+  }
+
+    /* -- Background Image -- */
+    #culture .hero-image {
+      background-image: var(--image-section-culture-1281);
+    }
+    #spin_trowel .hero-image {
+      background-image: var(--image-section-spin-trowel-1281);
+    }
+    #orbea_oiz .hero-image {
+      background-image: var(--image-section-orbea-oiz-1281);
+    }
+    #onda_bench .hero-image {
+      background-image: var(--image-section-onda-bench-1281);
+    }
+
+    /* -- Header -- */
+    .hero-header-logo {
+      width: 45px;
+    }
+
+    .hero-header-menu {
+      width: 45px;
+    }
+
+    /* -- Content -- */
+    .hero-content {
+      padding-top: 10em;
+    }
+
+      .hero-content-image {
+        margin-bottom: 1em;
+        height: 16em;
+      }
+      #spin_trowel .hero-content-image {
+        content: url(../icon/spin_trowel.svg);
+      }
+      #orbea_oiz .hero-content-image {
+        content: url(../icon/orbea_oiz.svg);
+      }
+      #onda_bench .hero-content-image {
+        content: url(../icon/onda_bench.svg);
+      }
+
+      .hero-content-image-second {
+        margin-bottom: 1em;
+        height: 16em;
+      }
+      #spin_trowel .hero-content-image-second,
+      #orbea_oiz .hero-content-image-second,
+      #onda_bench .hero-content-image-second {
+        display: none;
+      }
+
+      .hero-content-link {
+        font-size: 1.2em;
+      }
+
+    /* -- Sidebar -- */
+    .hero-item-icon {
+      width: 1em;
+    }
+
+    /* -- Footer -- */
+    .hero-footer-icon {
+      width: 10px;
+    }
+
+    .hero-footer-link {
+      font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1281px) and (min-aspect-ratio: 3/2) {
+  /* -- HERO -- */
+  .hero {
+    padding: 3rem;
+  }
+
+    /* -- Background Image -- */
+    #culture .hero-image {
+      background-image: var(--image-section-culture-1281r);
+    }
+    #spin_trowel .hero-image {
+      background-image: var(--image-section-spin-trowel-1281r);
+    }
+    #orbea_oiz .hero-image {
+      background-image: var(--image-section-orbea-oiz-1281r);
+    }
+    #onda_bench .hero-image {
+      background-image: var(--image-section-onda-bench-1281r);
+    }
+
+    /* -- Header -- */
+    .hero-header-logo {
+      width: 45px;
+    }
+
+    .hero-header-menu {
+      width: 45px;
+    }
+
+    /* -- Content -- */
+    .hero-content {
+      padding-top: 10em;
+    }
+
+      .hero-content-image {
+        margin-bottom: 1em;
+        height: 18em;
+      }
+      #spin_trowel .hero-content-image {
+        content: url(../svg/spin_trowel.svg);
+      }
+      #orbea_oiz .hero-content-image {
+        content: url(../svg/orbea_oiz.svg);
+      }
+      #onda_bench .hero-content-image {
+        content: url(../svg/onda_bench.svg);
+      }
+
+      .hero-content-image-second {
+        margin-bottom: 1em;
+        height: 18em;
+      }
+      #spin_trowel .hero-content-image-second,
+      #orbea_oiz .hero-content-image-second,
+      #onda_bench .hero-content-image-second {
+        display: none;
+      }
+
+      .hero-content-link {
+        font-size: 1.2em;
+      }
+
+    /* -- Sidebar -- */
+    .hero-item-icon {
+      width: 1em;
+    }
+
+    /* -- Footer -- */
+    .hero-footer-icon {
+      width: 10px;
+    }
+
+    .hero-footer-link {
+      font-size: 1.2em;
     }
 }

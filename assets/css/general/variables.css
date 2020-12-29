@@ -4,29 +4,58 @@
   --color-gray: #E0E0E0;
   --color-white: #FFFFFF;
 
-  --color-section-culture: #3CA562;
-  --color-section-track-planner: #017EFE;
-  --color-section-spin-trowel: #B3B4C6;
-  --color-section-oiz-it: #017EFE;
-  --color-section-onda: #CBAB5E;
-  --color-section-xabidb: #000000;
+  --color-section-culture: #04c493;
+  --color-section-spin-trowel: #c4c4c4;
+  --color-section-orbea-oiz: #1a1a1b;
+  --color-section-onda-bench: #eaa54e;
+  --color-section-xabidb: #fff;
 
   /* -- Backgrounds -- */
-  --image-section-culture: url('../img/culture.png');
-  --image-section-culture-mobile: url('../img/culture-mobile.png');
+  --image-section-culture: url('../img/culture/culture.png');
+  --image-section-spin-trowel: url('../img/spin/spin_trowel.png');
+  --image-section-orbea-oiz: url('../img/oiz/orbea_oiz.png');
+  --image-section-onda-bench: url('../img/onda/onda_bench.png');
+  --image-section-xabidb: url('../img/xabidb/xabidb.png');
 
-  --image-section-track-planner: url('../img/track-planner.png');
-  --image-section-track-planner-mobile: url('../img/track-planner-mobile.png');
+  /* min-width: 600px */
+  --image-section-culture-600: url('../img/culture/culture_600.png');
+  --image-section-spin-trowel-600: url('../img/spin/spin_trowel_600.png');
+  --image-section-orbea-oiz-600: url('../img/oiz/orbea_oiz_600.png');
+  --image-section-onda-bench-600: url('../img/onda/onda_bench_600.png');
+  --image-section-xabidb-600: url('../img/xabidb/xabidb_600.png');
 
-  --image-section-spin-trowel: url('../img/spin-trowel.png');
-  --image-section-spin-trowel-mobile: url('../img/spin-trowel-mobile.png');
+  /* min-width: 801px portrait */
+  --image-section-culture-801p: url('../img/culture/culture_801p.png');
+  --image-section-spin-trowel-801p: url('../img/spin/spin_trowel_801p.png');
+  --image-section-orbea-oiz-801p: url('../img/oiz/orbea_oiz_801p.png');
+  --image-section-onda-bench-801p: url('../img/onda/onda_bench_801p.png');
+  --image-section-xabidb-801p: url('../img/xabidb/xabidb_801p.png');
 
-  --image-section-oiz-it: url('../img/oiz-it.png');
-  --image-section-oiz-it-mobile: url('../img/oiz-it-mobile.png');
+  /* min-width: 801px landscape */
+  --image-section-culture-801: url('../img/culture/culture_801.png');
+  --image-section-spin-trowel-801: url('../img/spin/spin_trowel_801.png');
+  --image-section-orbea-oiz-801: url('../img/oiz/orbea_oiz_801.png');
+  --image-section-onda-bench-801: url('../img/onda/onda_bench_801.png');
+  --image-section-xabidb-801: url('../img/xabidb/xabidb_801.png');
 
-  --image-section-onda: url('../img/onda.png');
-  --image-section-onda-mobile: url('../img/onda-mobile.png');
+  /* min-width: 1025px */
+  --image-section-culture-1025: url('../img/culture/culture_1025.png');
+  --image-section-spin-trowel-1025: url('../img/spin/spin_trowel_1025.png');
+  --image-section-orbea-oiz-1025: url('../img/oiz/orbea_oiz_1025.png');
+  --image-section-onda-bench-1025: url('../img/onda/onda_bench_1025.png');
+  --image-section-xabidb-1025: url('../img/xabidb/xabidb_1025.png');
 
-  --image-section-xabidb: url('../img/xabidb.png');
-  --image-section-xabidb-mobile: url('../img/xabidb-mobile.png');
+  /* min-width: 1281px */
+  --image-section-culture-1281: url('../img/culture/culture_1281.png');
+  --image-section-spin-trowel-1281: url('../img/spin/spin_trowel_1281.png');
+  --image-section-orbea-oiz-1281: url('../img/oiz/orbea_oiz_1281.png');
+  --image-section-onda-bench-1281: url('../img/onda/onda_bench_1281.png');
+  --image-section-xabidb-1281: url('../img/xabidb/xabidb_1281.png');
+
+  /* min-width: 1281px ratio */
+  --image-section-culture-1281r: url('../img/culture/culture_1281r.png');
+  --image-section-spin-trowel-1281r: url('../img/spin/spin_trowel_1281r.png');
+  --image-section-orbea-oiz-1281r: url('../img/oiz/orbea_oiz_1281r.png');
+  --image-section-onda-bench-1281r: url('../img/onda/onda_bench_1281r.png');
+  --image-section-xabidb-1281r: url('../img/xabidb/xabidb_1281r.png');
 }
