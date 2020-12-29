@@ -24,7 +24,7 @@ function showCarouselSlide() {
       slideLoaded = true
       // Agrega la clase active a la seccion cuyo id se encuentra en la url
       $slide.parentElement.classList.add('active');
-      $slide.addEventListener('wheel', redirectURL, true);
+      $slide.addEventListener('wheel', redirectURL, false);
       $currentSlide = $slide;
     } else {
       // Elimina la posible clase active en la seccion
@@ -36,7 +36,7 @@ function showCarouselSlide() {
   // Si la url no tiene asignado ningun id mostrara el slide por defecto (culture)
   if (!slideLoaded) {
     $slides[0].parentElement.classList.add('active');
-    $slides[0].addEventListener('wheel', redirectURL, true);
+    $slides[0].addEventListener('wheel', redirectURL, false);
     $currentSlide = $slides[0];
   }
 }
