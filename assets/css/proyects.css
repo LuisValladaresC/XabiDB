@@ -1,456 +1,575 @@
 @import './index.css';
 
-/* ----------------- *\
-\* --- GENERALES --- */
+/* --------------------------------- */
+/* ----------- GENERALES ----------- */
+/* --------------------------------- */
 
-body {
-  width: 100%;
-  overflow-x: hidden;
+section {
+  height: inherit;
+  width: inherit;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
 }
 
 p {
-    font-size: 0.97rem;
-    text-align: justify;
-    line-height: 1.2;
-}
-p.hero-footer-text {
-    font-size: 11.2px;
+  text-align: justify;
+  line-height: 1.2;
+  color: dimgrey;
 }
 
-.arrows {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+/* --------------------------------- */
+/* ------------- TRENDS ------------ */
+/* --------------------------------- */
 
-    display: grid;
-    grid-template: 1fr 1fr 1fr / 1fr 1fr;
-    grid-template-areas: "down down" "left right" "up up";
-    align-items: center;
+#trends {
+  height: auto;
+  display: flex;
 }
 
-    .arrows * {
-        transition: 200ms;
-        cursor: pointer;
-    }
-    .arrows *:hover {
-        transform: scale(0.95)
-    }
+  .trends-content {
+      padding-top: 2em;
+      width: 100%;
+  }
 
-    .arrows .up {
-        grid-area: up;
-        align-self: flex-end;
-
-        width: 130px !important;
-        margin: 0 auto;
+    .trends-content-icon {
+        width: 5em;
+        padding: 1em 0 em 0;
+        display: block;
+        margin: auto;
     }
 
-    .arrows .left {
-        grid-area: left;
-        justify-self: flex-start;
-
-        height: 130px;
-        width: auto !important;
-        margin-bottom: 3.44rem;
+    .trends-content-title {
+        text-align: center;
+        margin-bottom: 0.5rem;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.2rem;
     }
 
-    .arrows .right {
-        grid-area: right;
-        justify-self: flex-end;
-        
-        height: 130px;
-        width: auto !important;
-        margin-bottom: 3.44rem;
+    .trends-content-text {
+        padding: 0 1em 3em 1em;
+        margin: 0;
     }
 
-        .arrows img {
-            width: inherit;
-            height: inherit;
-        }
+/* --------------------------------- */
+/* ------------- SKETCH ------------ */
+/* --------------------------------- */
 
-/* ----------------- *\
-\* ----- HERO ------ */
-
-#main {
-    padding: 7.5rem 0;
-    height: auto;
-
-    display: flex;
-    flex-direction: column;
+#sketch {
+  height: auto;
+  display: flex;
 }
 
-    .main-description {
-        padding: 0 9.37rem 7.5rem;
-        padding-top: 0;
+  .sketch-content {
+      width: 100%;
+  }
 
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 5rem;
-    }
+  .sketch-content-image {
+      width: 100%;
+      padding-bottom: 5em;
+  }
 
-        .main-description-card {
-            display: flex;
-        }
+/* --------------------------------- */
+/* ----------- ASSORTMENT ---------- */
+/* --------------------------------- */
 
-            .main-card-title {
-                margin: 0;
-                margin-right: 3.75rem;
-
-                color: var(--color-gray);
-                text-transform: uppercase;
-                font-weight: 400;
-                font-size: 1.1rem;
-            }
-
-            .main-card-text {
-                margin: 0;
-            }
-
-    .main-images {
-        padding: 0 6.87rem;
-
-        display: grid;
-        grid-template: minmax(auto, 270px) minmax(auto, 195px) / 1fr 1.5fr 0.8fr 0.8fr 0.6fr;
-        grid-gap: 1.87rem;
-    }
-
-        .main-images-item {
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
-        }
-        .main-images-item.row-2 {
-            grid-row: 2 span;
-        }
-        .main-images-item.col-4 {
-            grid-column: 4 span;
-        }
-
-/* ----------------- *\
-\* --- LOGOTYPE ---- */
-
-#logotype {
-    height: auto;
-    padding: 10.62rem 14.1rem;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
+#assortment {
+  height: auto;
+  display: flex;
 }
 
-  .culture{
-    background-color: var(--color-section-culture);
-  }
-  .track_planner {
-    background-color: var(--color-section-track-planner);
-  }
-  .spin_trowel {
-    background-color: var(--color-section-spin-trowel);
-  }
-  .oiz_it {
-    background-color: var(--color-section-oiz-it);
-  }
-  .onda {
-    background-color: var(--color-section-onda);
-  }
-  .xabidb {
-    background-color: var(--color-section-xabidb);
+  .assortment-content {
+      width: 100%;
   }
 
-    .logotype-content-description {
-        color: var(--color-white);
-        font-weight: 300;
-
-        align-self: center;
-        padding-bottom: 0.5rem;
-    }
-
-    .logotype-content-image {
-        height: 9.37rem;
-        margin-left: 1.87rem; 
-        vertical-align: top;
-
-        justify-self: center;
-        align-self: center;
-    }
-
-/* ----------------- *\
-\* - PICTURES 1,2 -- */
-
-#picture_1 {
-    height: auto;
-    padding: 3.75rem;
-
-    display: block;
-}
-
-    #picture_1 img {
+    .assortment-content-morocco {
         width: 100%;
-        object-fit: cover;
+        padding-bottom: 4em;
+    }
+    .assortment-content-mexico {
+        width: 100%;
+        padding-bottom: 4em;
+    }
+    .assortment-content-india {
+        width: 100%;
+        padding-bottom: 4em;
+    }
+    .assortment-content-float {
+        width: 100%;
+        padding-bottom: 4em;
+    }
+    .assortment-content-text {
+        padding: 0 1em 4em 1em;
+        margin: 0;
     }
 
-#picture_2 {
-    height: 0;
-    padding: 0;
-    padding-bottom: calc(100% / 1.6);
+/* --------------------------------- */
+/* -------------- USE -------------- */
+/* --------------------------------- */
 
-    display: block;
-    position: relative;
+#use {
+  height: auto;
+  display: flex;
 }
 
-    #picture_2 img {
-        width: 100%;
-        object-fit: cover;
-        margin-top: 1.87rem;
+  .use-content {
+    width: 100%;
+    padding: 0em 2em 0em 2em;
+  }
 
-        position: relative;
-        z-index: 200;
+    .use-content-icon {
+      width: 100%;
+      display: block;
+      margin: auto;
+      padding: 1em 0em 4em 0em;
     }
 
-/* ----------------- *\
-\* ---- DETAILS ---- */
+/* --------------------------------- */
+/* ------------ RENDERS ------------ */
+/* --------------------------------- */
 
-#details {
-    height: auto;
-    padding: 15% 6.87rem;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 5rem;
+#renders {
+  height: auto;
+  display: flex;
 }
 
-/* ------------------ *\
-\* - PICTURES 3,4,5 - */
+  .renders-content {
+    width: 100%;
+  }
 
-#picture_3, 
-#picture_4,
-#picture_5 {
-    height: auto;
-    padding: 6.87rem;
-    padding-top: 0;
-    display: block;
-
-    position: relative;
-}
-
-    #picture_3 .picture-image, 
-    #picture_4 .picture-image,
-    #picture_5 .picture-image {
-        width: 100%;
+    .renders-content-image {
+      width: 100%;
+      padding-bottom: 2em;
     }
 
 /* --------------------------------- */
 /* --------- MEDIA QUERIES --------- */
 /* --------------------------------- */
 
-  @media (max-width: 768px) {
-  /* ----------------- *\
-  \* --- GENERALES --- */
-
-  .arrows .up {
-    width: 90px !important;
+@media (min-width: 600px){
+  /* -- TRENDS -- */
+  .trends-content {
+    padding-top: 8em;
+    padding-bottom: 8em;
+    width: 100%;
   }
 
-  .arrows .left,
-  .arrows .right {
-    height: 90px;
-    margin-bottom: 1.7rem;
+  .trends-content-text {
+    padding: 0 10em 3em 10em;
+    margin: 0;
   }
 
-  /* ----------------- *\
-  \* ----- HERO ------ */
-
-  #main {
-    padding: 5.75rem 0;
+  /* -- SKETCH -- */
+  .sketch-content {
+    padding-left: 6em;
+    padding-right: 6em;
   }
 
-    .main-description {
-      padding: 0 4.68rem 3.75rem;
-      grid-column-gap: 4rem;
-    }
-
-      .main-card-title {
-        margin-right: 1.9rem;
-      }
-
-      .main-images {
-        padding: 0 3.4rem;
-        grid-gap: 0.93rem;
-      }
-
-  /* ----------------- *\
-  \* --- LOGOTYPE ---- */
-
-  #logotype {
-    padding: 9rem 7.05rem;
+  /* -- ASSORTMENT -- */
+  .assortment-content {
+    padding-left: 6em;
+    padding-right: 6em;
   }
 
-  /* ----------------- *\
-  \* ---- DETAILS ---- */
-
-  #details {
-    padding: 15% 3.4rem;
-    grid-column-gap: 2.5rem;
+  .assortment-content-text {
+    padding: 0 4em 4em 4em;
+    margin: 0;
   }
 
-  /* ------------------ *\
-  \* - PICTURES 3,4,5 - */
+  /* -- USE -- */
+  .use-content {
+    width: 100%;
+    padding: 0em 10em 0em 10em;
+  }
 
-  #picture_3, 
-  #picture_4,
-  #picture_5 {
-    padding: 3.4rem;
-    padding-top: 0;
+  /* -- RENDERS -- */
+  .renders-content {
+    padding-left: 6em;
+    padding-right: 6em;
   }
 }
 
-@media (max-width: 425px) {
-  /* ----------------- *\
-  \* --- GENERALES --- */
-
-  .hero-footer {
-    margin-bottom: 25px;
+@media (min-width: 801px) and (orientation: portrait){
+  /* --- MAIN --- */
+  section{
+    padding: 3rem;
   }
 
-  p {
-    font-size: 2.2rem;
-  }
-  p.hero-footer-text {
-    font-size: 9.6px;
-  }
-
-  .arrows .left,
-  .arrows .right {
-    margin-bottom: 42px;
+  /* -- TRENDS -- */
+  .trends-content {
+    padding-top: 8em;
+    padding-bottom: 8em;
+    width: 100%;
   }
 
-  /* ----------------- *\
-  \* ----- HERO ------ */
-
-  #main {
-    padding: 150px 0;
+  .trends-content-icon {
+    width: 6em;
+    padding: 1em 0 1em 0;
   }
 
-    .main-description {
-      grid-template: auto auto / 1fr;
-      padding: 0 0.1rem 150px;
-      grid-row-gap: 25px;
-    }
-
-      .main-card-title {
-        display: none
-      }
-
-    .main-images {
-      padding: 0 8px;
-      grid-template: minmax(auto, 110px) minmax(auto, 158px) minmax(auto, 245px) minmax(auto, 66px) / 1fr 1fr 1fr; 
-      grid-column-gap: 10px;
-      grid-row-gap: 18px;
-    }
-
-      .main-images-item.col-2-xs {
-        grid-column: 2 span;
-        grid-row-start: 3;
-      }
-      .main-images-item.col-2-xs-second {
-        grid-column: 2 span;
-        grid-row-start: 1;
-      }
-      .main-images-item.col-3-xs {
-        grid-column: 3 span;
-        grid-row-start: 4;
-      }
-      .main-images-item.row-4-xs {
-        grid-row-start: 1;
-        grid-row-end: 4;
-        grid-column-start: 3;
-      }
-
-  /* ----------------- *\
-  \* --- LOGOTYPE ---- */
-
-  #logotype {
-    padding: 150px 0;
-    grid-template-columns: 1fr;
+  .trends-content-text {
+    padding: 0 16em 6em 16em;
+    margin: 0;
   }
 
-    .logotype-content-description {
-      padding: 0 0.1rem;
-    }
+  /* -- SKETCH -- */
+  .sketch-content {
+    padding-left: 10em;
+    padding-right: 10em;
+  }
 
-    .logotype-content-image {
-      grid-row-start: 1;
-      margin-left: 0; 
-      
-      width: calc(100% - 30px);
-      height: auto;
-      vertical-align: top;
+  /* -- ASSORTMENT -- */
+  .assortment-content {
+    padding-left: 10em;
+    padding-right: 10em;
+  }
 
+  .assortment-content-text {
+    padding: 0 8em 4em 8em;
+    margin: 0;
+  }
 
-      justify-self: center;
-      align-self: center;
-    }
+  /* -- USE -- */
+  .use-content {
+    width: 100%;
+    padding: 0em 16em 0em 16em;
+  }
 
-  /* ----------------- *\
-  \* - PICTURES 1,2 -- */
+  /* -- RENDERS -- */
+  .renders-content {
+    padding-left: 8em;
+    padding-right: 8em;
+  }
+}
 
-  #picture_1 {
-    height: auto;
-    padding: 150px 8px;
+@media (min-width: 801px) and (orientation: landscape){
+  /* --- MAIN --- */
+  section {
+    padding: 3rem;
+  }
 
+  /* -- TRENDS -- */
+  .trends-content {
+    padding-top: 10em;
+    padding-bottom: 10em;
+    width: 100%;
+  }
+
+  .trends-box-one {
+    width: 33%;
+    float: left;
+    padding-top: 1.75em;
+  }
+
+  .trends-box-two {
+    width: 33%;
+    display: inline-block;
+  }
+
+  .trends-box-three {
+    width: 33%;
+    float: right;
+    padding-top: 1.75em;
+  }
+  
+  .trends-content-icon {
+    width: 6em;
+    padding: 1em 0 1em 0;
+  }
+  
+  .trends-content-text {
+    padding: 0 2em 3em 2em;
+    margin: 0;
+  }
+  
+  /* -- SKETCH -- */
+  .sketch-content {
+    padding-left: 8em;
+    padding-right: 8em;
+  }
+
+  /* -- ASSORTMENT -- */
+  .assortment-content {
+    padding-left: 8em;
+    padding-right: 8em;
+  }
+
+  .assortment-content-text {
+    padding: 0 8em 4em 8em;
+    margin: 0;
+  }
+
+  /* -- USE -- */
+  .use-content {
+    width: 100%;
+    padding: 0em 6em 0em 6em;
+  }
+
+  .use-box-one {
+    width: 20%;
+    float: left;
+    padding-top: 6em;
+  }
+
+  .use-box-two {
+    width: 60%;
+    display: inline-block;
+  }
+
+  .use-box-three {
+    width: 20%;
+    float: right;
+    padding-top: 6em;
+  }
+
+  .use-content-icon {
+    width: 100%;
     display: block;
+    margin: auto;
+    padding: 1em 0em 4em 0em;
+  }
+
+  /* -- RENDERS -- */
+  .renders-content {
+    padding-left: 8em;
+    padding-right: 8em;
+  }
+}
+
+@media (min-width: 1025px){
+  /* --- MAIN --- */
+  section{
+    padding: 3rem;
+  }
+
+  /* -- TRENDS -- */
+  .trends-content {
+    padding-top: 18em;
+    padding-bottom: 18em;
+    width: 100%;
+  }
+
+  .trends-box-one {
+    width: 33%;
+    float: left;
+    padding-top: 1.75em;
+  }
+
+  .trends-box-two {
+    width: 33%;
+    display: inline-block;
+  }
+
+  .trends-box-three {
+    width: 33%;
+    float: right;
+    padding-top: 1.75em;
   }
   
-    #picture_1 img {
-      content: url('../assets/img/culture/culture-image-mobile-1.png');
-    }
-  
-  #picture_2 {
-    height: auto;
-    padding: 150px 8px;
+  .trends-content-icon {
+    width: 7em;
+    padding: 1em 0 1em 0;
   }
   
-    #picture_2 img {
-      margin: 0;
-      content: url('../assets/img/culture/culture-image-mobile-2.png');
-    }
-
-  /* ----------------- *\
-  \* ---- DETAILS ---- */
-
-  #details {
-    padding: 150px 0.1rem;
-
-    grid-template-columns: 1fr;
-    grid-row-gap: 20px;
+  .trends-content-text {
+    padding: 0 2em 3em 2em;
+    margin: 0;
+  }
+  
+  /* -- SKETCH -- */
+  .sketch-content {
+    padding-left: 12em;
+    padding-right: 12em;
+  }
+}
+  
+@media (min-width: 1281px){
+  /* --- MAIN --- */
+  section{
+    padding: 3rem;
   }
 
-    .details-card {
-      margin: 0;
-    }
-
-  /* ------------------ *\
-  \* - PICTURES 3,4,5 - */
-
-  #picture_3, 
-  #picture_4,
-  #picture_5 {
-    padding: 85px 8px;
-    padding-top: 0;
-  }
-  #picture_5 {
-    padding-bottom: 8px;
+  /* -- TRENDS -- */
+  .trends-content {
+    padding-top: 18em;
+    padding-bottom: 18em;
+    width: 100%;
   }
 
-    #picture_3 .picture-image {
-      content: url('../assets/img/culture/culture-image-mobile-3.png');
-    }
-    #picture_4 .picture-image {
-      content: url('../assets/img/culture/culture-image-mobile-4.png');
-    }
-    #picture_5 .picture-image {
-      content: url('../assets/img/culture/culture-image-mobile-5.png');
-    }
+  .trends-box-one {
+    width: 33%;
+    float: left;
+    padding-top: 1.75em;
+  }
+
+  .trends-box-two {
+    width: 33%;
+    display: inline-block;
+  }
+
+  .trends-box-three {
+    width: 33%;
+    float: right;
+    padding-top: 1.75em;
+  }
+
+  .trends-content-icon {
+    width: 7em;
+    padding: 1em 0 1em 0;
+  }
+
+  .trends-content-text {
+    padding: 0 2em 3em 2em;
+    margin: 0;
+  }
+
+  /* -- SKETCH -- */
+  .sketch-content {
+    padding-left: 14em;
+    padding-right: 14em;
+  }
+
+  /* -- ASSORTMENT -- */
+  .assortment-content {
+    padding-left: 14em;
+    padding-right: 14em;
+  }
+
+  .assortment-content-text {
+    padding: 0 14em 4em 14em;
+    margin: 0;
+  }
+
+  /* -- USE -- */
+  .use-content {
+    width: 100%;
+    padding: 0em 12em 0em 12em;
+  }
+
+  .use-box-one {
+    width: 20%;
+    float: left;
+    padding-top: 8em;
+  }
+
+  .use-box-two {
+    width: 60%;
+    display: inline-block;
+  }
+
+  .use-box-three {
+    width: 20%;
+    float: right;
+    padding-top: 8em;
+  }
+
+  .use-content-icon {
+    width: 100%;
+    display: block;
+    margin: auto;
+    padding: 1em 0em 4em 0em;
+  }
+
+  /* -- RENDERS -- */
+  .renders-content {
+    padding-left: 14em;
+    padding-right: 14em;
+  }
+}
+
+@media (min-width: 1281px) and (min-aspect-ratio: 3/2) {
+  /* --- MAIN --- */
+  section{
+    padding: 3rem;
+  }
+
+  /* -- TRENDS -- */
+  .trends-content {
+    padding-top: 18em;
+    padding-bottom: 18em;
+    width: 100%;
+  }
+
+  .trends-box-one {
+    width: 33%;
+    float: left;
+    padding-top: 1.75em;
+  }
+
+  .trends-box-two {
+    width: 33%;
+    display: inline-block;
+  }
+
+  .trends-box-three {
+    width: 33%;
+    float: right;
+    padding-top: 1.75em;
+  }
+
+  .trends-content-icon {
+    width: 7em;
+    padding: 1em 0 1em 0;
+  }
+
+  .trends-content-text {
+    padding: 0 6em 3em 6em;
+    margin: 0;
+  }
+
+  /* -- SKETCH -- */
+  .sketch-content {
+    padding-left: 14em;
+    padding-right: 14em;
+  }
+
+  /* -- ASSORTMENT -- */
+  .assortment-content {
+    padding-left: 14em;
+    padding-right: 14em;
+  }
+
+  .assortment-content-text {
+    padding: 0 24em 4em 24em;
+    margin: 0;
+  }
+
+  /* -- USE -- */
+  .use-content {
+    width: 100%;
+    padding: 0em 14em 0em 14em;
+  }
+
+  .use-box-one {
+    width: 20%;
+    float: left;
+    padding-top: 12em;
+  }
+
+  .use-box-two {
+    width: 60%;
+    display: inline-block;
+  }
+
+  .use-box-three {
+    width: 20%;
+    float: right;
+    padding-top: 12em;
+  }
+
+  .use-content-icon {
+    width: 100%;
+    display: block;
+    margin: auto;
+    padding: 1em 0em 4em 0em;
+  }
+
+  /* -- RENDERS -- */
+  .renders-content {
+    padding-left: 14em;
+    padding-right: 14em;
+  }
 }

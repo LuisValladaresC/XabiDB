@@ -101,6 +101,7 @@
       /* -- Content -- */
       .hero-content {
         padding-top: 4em;
+        overflow: hidden;
       }
 
         .hero-content-image,
