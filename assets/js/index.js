@@ -7,11 +7,13 @@ const $slides = Array.from(document.querySelectorAll('.carousel-item .hero'));
 var $currentSlide;
 var initialTouchPosition;
 var finishingTouchPosition
+var timer;
 
 window.addEventListener('popstate', showCarouselSlide);
 window.addEventListener('touchstart', e => touchInitial = e.touches[0].clientY);
 window.addEventListener('touchend', redirectURL);
 window.addEventListener('keydown', redirectURL);
+$slides.map($slide => $slide.addEventListener('wheel', redirectURL, true))
 
 showCarouselSlide();
 
@@ -20,30 +22,31 @@ function showCarouselSlide() {
   let slideLoaded = false;
 
   $slides.map($slide => {
+    $slide.parentElement.classList.remove('active');
     if (document.location.href.includes($slide.id)) {
       slideLoaded = true
       // Agrega la clase active al slide cuyo id se encuentra en la url
       $slide.parentElement.classList.add('active');
-      setTimeout(() => $slide.addEventListener('wheel', redirectURL), 200);
       $currentSlide = $slide;
+
+      timer = true;
+      setTimeout(() => timer = false, 500);
     } else {
       // Elimina la posible clase active del slide
       $slide.parentElement.classList.remove('active');
-      $slide.removeEventListener('wheel', redirectURL)
     }
   });
 
   // Si la url no tiene asignado ningun id mostrara el slide por defecto (culture)
   if (!slideLoaded) {
     $slides[0].parentElement.classList.add('active');
-    $slides[0].addEventListener('wheel', redirectURL);
     $currentSlide = $slides[0];
   }
 }
 
 // Modifica el ID al que apunta la URL como respuesta a: Scroll ▲ ▼, Nav Keys ▲ ▼ & Touch ▲ ▼
 function redirectURL(e) {
-  console.log($currentSlide.id)
+  if (e.type == 'wheel' && timer) return;
   if (e.type == 'touchend') finishingTouchPosition = e.changedTouches[0].clientY;
 
   switch ($currentSlide.id) {
