@@ -477,13 +477,13 @@
         height: 16em;
       }
       #spin_trowel .hero-content-image {
-        content: url(../icon/spin_trowel.svg);
+        content: url(../svg/spin_trowel.svg);
       }
       #orbea_oiz .hero-content-image {
-        content: url(../icon/orbea_oiz.svg);
+        content: url(../svg/orbea_oiz.svg);
       }
       #onda_bench .hero-content-image {
-        content: url(../icon/onda_bench.svg);
+        content: url(../svg/onda_bench.svg);
       }
 
       .hero-content-image-second {
