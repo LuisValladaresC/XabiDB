@@ -1,0 +1,106 @@
+/* --------------------------------- */
+/* ------------ EXTERNAS ----------- */
+/* --------------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:wght@700|Montserrat:300,400,500,600,700&display=swap');
+
+/* --------------------------------- */
+/* ------------ LOCALES ------------ */
+/* --------------------------------- */
+
+/* DaBronxSans-Thin */
+@font-face {
+  font-family: 'DaBronx Sans';
+  src: local("DaBronx Sans Thin"),
+  url('../../fonts/DaBronxSans-Thin.otf');
+  font-weight: 100;
+  font-style: normal;
+}
+/* DaBronxSans-ThinItalic */
+@font-face {
+  font-family: 'DaBronx Sans';
+  src: local("DaBronx Sans Thin Italic"),
+  url('../../fonts/DaBronxSans-ThinItalic.otf');
+  font-weight: 100;
+  font-style: italic;
+}
+/* DaBronxSans-ExtraLight */
+@font-face {
+  font-family: 'DaBronx Sans';
+  src: local("DaBronx Sans Extra Light"),
+  url('../../fonts/DaBronxSans-ExtraLight.otf');
+  font-weight: 200;
+  font-style: normal;
+}
+/* DaBronxSans-ExtraLightItalic */
+@font-face {
+  font-family: 'DaBronx Sans';
+  src: local("DaBronx Sans Extra Light Italic"),
+  url('../../fonts/DaBronxSans-ExtraLightItalic.otf');
+  font-weight: 200;
+  font-style: italic;
+}
+/* DaBronxSans-Light */
+@font-face {
+  font-family: 'DaBronx Sans';
+  src: local("DaBronx Sans Light"),
+  url('../../fonts/DaBronxSans-Light.otf');
+  font-weight: 300;
+  font-style: normal;
+}
+/* DaBronxSans-LightItalic */
+@font-face {
+  font-family: 'DaBronx Sans';
+  src: local("DaBronx Sans Light Italic"),
+  url('../../fonts/DaBronxSans-LightItalic.otf');
+  font-weight: 300;
+  font-style: italic;
+}
+/* DaBronxSans-Book */
+@font-face {
+  font-family: 'DaBronx Sans';
+  src: local("DaBronx Sans Book"),
+  url('../../fonts/DaBronxSans-Book.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+/* DaBronxSans-BookItalic */
+@font-face {
+  font-family: 'DaBronx Sans';
+  src: local("DaBronx Sans Book Italic"),
+  url('../../fonts/DaBronxSans-BookItalic.otf');
+  font-weight: 400;
+  font-style: italic;
+}
+/* DaBronxSans-Regular */
+@font-face {
+  font-family: 'DaBronx Sans';
+  src: local("DaBronx Sans Regular"),
+  url('../../fonts/DaBronxSans-Regular.otf');
+  font-weight: 500;
+  font-style: normal;
+}
+/* DaBronxSans-RegularItalic */
+@font-face {
+  font-family: 'DaBronx Sans';
+  src: local("DaBronx Sans Regular Italic"),
+  url('../../fonts/DaBronxSans-RegularItalic.otf');
+  font-weight: 500;
+  font-style: italic;
+}
+/* DaBronxSans-Medium */
+@font-face {
+  font-family: 'DaBronx Sans';
+  src: local("DaBronx Sans Medium"),
+  url('../../fonts/DaBronxSans-Medium.otf');
+  font-weight: 600;
+  font-style: normal;
+}
+/* DaBronxSans-MediumItalic */
+@font-face {
+  font-family: 'DaBronx Sans';
+  src: local("DaBronx Sans Medium Italic"),
+  url('../../fonts/DaBronxSans-MediumItalic.otf');
+  font-weight: 600;
+  font-style: italic;
+}

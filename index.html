@@ -10,218 +10,90 @@
 </head>
 
 <body>
-  <div class="carousel">
-    <div class="carousel-item active">
-      <!-- Section Culture -->
-      <section id="culture" class="hero">
-        <div class="hero-image"></div>
+  <div class="container-fluid">
+    <div class="container container--carousel">
+      <header class="header">
+        <a class="header__link--icon" href="./index.html">
+          <img class="header__logo" src="./assets/svg/logo.svg">
+          <img class="header__logo header__logo--dark" src="./assets/svg/logo_dark.svg">
+        </a>
+        <button class="header__button--icon">
+          <img class="header__menu" src="./assets/svg/menu.svg">
+          <img class="header__menu header__menu--dark" src="./assets/svg/menu_dark.svg">
+        </button>
+      </header>
 
-        <header class="hero-header">
-          <a href="./index.html"><img class="hero-header-logo" src="./assets/svg/logo.svg" alt="logo"></a>
-          <img class="hero-header-menu" src="./assets/svg/menu.svg" alt="menu">
-        </header>
-
-        <div class="hero-content">
-          <a>
-            <img class="hero-content-image" src="./assets/svg/culture.svg">
-          </a><br>
-          <a class="hero-content-link" href="./proyects/culture.html">+ info</a>
+      <main class="content">
+        <div class="carousel">
+          <!-- Culture -->
+          <section id="culture" class="hero carousel__item">
+            <div class="hero__background-color"></div>
+            <div class="hero__container">
+              <h1 class="hero__title">Culture</h1>
+              <a class="hero__info" href="./proyects/culture.html">+ info</a>
+            </div>
+            <picture class="hero__background-image">
+              <source media="(max-width: 800px)" srcset="./assets/img/culture_mobile.png">
+              <source media="(max-width: 1024px) and (orientation: portrait)" srcset="./assets/img/culture_mobile.png">
+              <img src="./assets/img/culture.png" alt="Culture">
+            </picture>
+          </section>
+          <!-- Spin Trowel -->
+          <section id="spin_trowel" class="hero carousel__item">
+            <div class="hero__background-color"></div>
+            <div class="hero__container">
+              <h1 class="hero__title">Spin Trowel</h1>
+              <a class="hero__info" href="./proyects/spin_trowel.html">+ info</a>
+            </div>
+            <picture class="hero__background-image">
+              <img src="./assets/img/spin_trowel.png" alt="Spin Trowel">
+            </picture>
+          </section>
+          <!-- Orbea Oiz -->
+          <section id="orbea_oiz" class="hero carousel__item">
+            <div class="hero__background-color"></div>
+            <div class="hero__container">
+              <h1 class="hero__title">Orbea Oiz</h1>
+              <a class="hero__info" href="./proyects/orbea_oiz.html">+ info</a>
+            </div>
+            <picture class="hero__background-image">
+              <img src="./assets/img/orbea_oiz.png" alt="Orbea Oiz">
+            </picture>
+          </section>
+          <!-- Onda Bench -->
+          <section id="onda_bench" class="hero carousel__item">
+            <div class="hero__background-color"></div>
+            <div class="hero__container">
+              <h1 class="hero__title">Onda Bench</h1>
+              <a class="hero__info" href="./proyects/onda_bench.html">+ info</a>
+            </div>
+            <picture class="hero__background-image">
+              <img src="./assets/img/onda_bench.png" alt="Onda Bench">
+            </picture>
+          </section>
+          <!-- XabiDB -->
+          <section id="xabidb" class="hero carousel__item carousel__item--theme-black">
+            <div class="hero__background-color"></div>
+            <div class="hero__container">
+              <h1 class="hero__title">XabiDB</h1>
+              <a class="hero__info" href="./proyects/xabidb.html">+ info</a>
+            </div>
+            <picture class="hero__background-image"></picture>
+          </section>
         </div>
 
-        <nav class="hero-sidebar">
-          <a class="hero-sidebar-item active" href="#culture">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-          <a class="hero-sidebar-item" href="#spin_trowel">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-          <a class="hero-sidebar-item" href="#orbea_oiz">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-          <a class="hero-sidebar-item" href="#onda_bench">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-          <a class="hero-sidebar-item" href="#xabidb">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
+        <nav class="sidebar">
+          <!-- Sidebar items injected by Javascript -->
         </nav>
+      </main>
 
-        <footer class="hero-footer">
-            <img class="hero-footer-icon" src="./assets/svg/arrow.svg">
-            <a class="hero-footer-link">+ contact</a>
-        </footer>
-      </section>
-    </div>
-
-    <div class="carousel-item">
-      <!-- Section Spin Trowel -->
-      <section id="spin_trowel" class="hero">
-        <div class="hero-image"></div>
-
-        <header class="hero-header">
-          <a href="./index.html"><img class="hero-header-logo" src="./assets/svg/logo.svg" alt="logo"></a>
-          <img class="hero-header-menu" src="./assets/svg/menu.svg" alt="menu">
-        </header>
-
-        <div class="hero-content">
-          <a>
-            <img class="hero-content-image" src="./assets/svg/spin.svg">
-            <img class="hero-content-image-second" src="./assets/svg/trowel.svg">
-          </a><br>
-          <a class="hero-content-link" href="./proyects/spin_trowel.html">+ info</a>
-        </div>
-
-        <nav class="hero-sidebar">
-          <a class="hero-sidebar-item" href="#culture">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-          <a class="hero-sidebar-item active" href="#spin_trowel">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-          <a class="hero-sidebar-item" href="#orbea_oiz">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-          <a class="hero-sidebar-item" href="#onda_bench">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-          <a class="hero-sidebar-item" href="#xabidb">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-        </nav>
-
-        <footer class="hero-footer">
-          <img class="hero-footer-icon" src="./assets/svg/arrow.svg">
-          <a class="hero-footer-link">+ contact</a>
-        </footer>
-      </section>
-    </div>
-
-    <div class="carousel-item">
-      <!-- Section Orbea Oiz -->
-      <section id="orbea_oiz" class="hero">
-        <div class="hero-image"></div>
-
-        <header class="hero-header">
-          <a href="./index.html"><img class="hero-header-logo" src="./assets/svg/logo.svg" alt="logo"></a>
-          <img class="hero-header-menu" src="./assets/svg/menu.svg" alt="menu">
-        </header>
-
-        <div class="hero-content">
-          <a>
-            <img class="hero-content-image" src="./assets/svg/orbea.svg">
-            <img class="hero-content-image-second" src="./assets/svg/oiz.svg">
-          </a><br>
-          <a class="hero-content-link" href="./proyects/orbea_oiz.html">+ info</a>
-        </div>
-
-        <nav class="hero-sidebar">
-          <a class="hero-sidebar-item" href="#culture">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-          <a class="hero-sidebar-item" href="#spin_trowel">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-          <a class="hero-sidebar-item active" href="#orbea_oiz">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-          <a class="hero-sidebar-item" href="#onda_bench">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-          <a class="hero-sidebar-item" href="#xabidb">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-        </nav>
-
-        <footer class="hero-footer">
-          <img class="hero-footer-icon" src="./assets/svg/arrow.svg">
-          <a class="hero-footer-link">+ contact</a>
-        </footer>
-      </section>
-    </div>
-
-    <div class="carousel-item">
-      <!-- Section Onda Bench -->
-      <section id="onda_bench" class="hero">
-        <div class="hero-image"></div>
-
-        <header class="hero-header">
-          <a href="./index.html"><img class="hero-header-logo" src="./assets/svg/logo.svg" alt="logo"></a>
-          <img class="hero-header-menu" src="./assets/svg/menu.svg" alt="menu">
-        </header>
-
-        <div class="hero-content">
-          <a>
-            <img class="hero-content-image" src="./assets/svg/onda.svg">
-            <img class="hero-content-image-second" src="./assets/svg/bench.svg">
-          </a><br>
-          <a class="hero-content-link" href="./proyects/onda_bench.html">+ info</a>
-        </div>
-
-        <nav class="hero-sidebar">
-          <a class="hero-sidebar-item" href="#culture">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-          <a class="hero-sidebar-item" href="#spin_trowel">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-          <a class="hero-sidebar-item" href="#orbea_oiz">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-          <a class="hero-sidebar-item active" href="#onda_bench">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-          <a class="hero-sidebar-item" href="#xabidb">
-            <img class="hero-item-icon" src="./assets/svg/mas.svg">
-          </a>
-        </nav>
-
-        <footer class="hero-footer">
-          <img class="hero-footer-icon" src="./assets/svg/arrow.svg">
-          <a class="hero-footer-link">+ contact</a>
-        </footer>
-      </section>
-    </div>
-
-    <div class="carousel-item">
-      <!-- Section XabiDB -->
-      <section id="xabidb" class="hero">
-        <div class="hero-image"></div>
-
-        <header class="hero-header">
-          <a href="./index.html"><img class="hero-header-logo" src="./assets/svg/logo_dark.svg" alt="logo"></a>
-          <img class="hero-header-menu" src="./assets/svg/menu_dark.svg" alt="menu">
-        </header>
-
-        <div class="hero-content">
-          <a>
-            <img class="hero-content-image" src="./assets/svg/xabidb.svg">
-          </a><br>
-          <a class="hero-content-link" href="proyects/xabidb.html">+ info</a>
-        </div>
-
-        <nav class="hero-sidebar">
-          <a class="hero-sidebar-item" href="#culture">
-            <img class="hero-item-icon" src="./assets/svg/mas_dark.svg">
-          </a>
-          <a class="hero-sidebar-item" href="#spin_trowel">
-            <img class="hero-item-icon" src="./assets/svg/mas_dark.svg">
-          </a>
-          <a class="hero-sidebar-item" href="#orbea_oiz">
-            <img class="hero-item-icon" src="./assets/svg/mas_dark.svg">
-          </a>
-          <a class="hero-sidebar-item" href="#onda_bench">
-            <img class="hero-item-icon" src="./assets/svg/mas_dark.svg">
-          </a>
-          <a class="hero-sidebar-item active" href="#xabidb">
-            <img class="hero-item-icon" src="./assets/svg/mas_dark.svg">
-          </a>
-        </nav>
-
-        <footer class="hero-footer">
-          <img class="hero-footer-icon" src="./assets/svg/arrow_dark_up.svg">
-          <a class="hero-footer-link">+ contact</a>
-        </footer>
-      </section>
+      <footer class="footer">
+        <button class="footer__button">
+          <img class="footer__icon-arrow" src="./assets/svg/arrow.svg">
+          <img class="footer__icon-arrow footer__icon-arrow--dark" src="./assets/svg/arrow_dark_up.svg">
+        </button>
+        <a class="footer__link" href="#">+ contact</a>
+      </footer>
     </div>
   </div>
 

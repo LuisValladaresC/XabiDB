@@ -3,9 +3,8 @@
 /* --------------------------------- */
 
 @import './normalize.css';
+@import './tipografias.css';
 @import './variables.css';
-
-@import url('https://fonts.googleapis.com/css?family=Oswald:wght@700|Montserrat:300,400,500,600,700&display=swap');
 
 html {
   font-family: 'Montserrat', sans-serif;
@@ -17,7 +16,19 @@ h1 {
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-width: 320px;
   overflow-x: hidden;
+}
+
+.container-fluid {
+  position: relative;
+  min-height: inherit;
+  width: 100%;
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  width: 100%;
 }

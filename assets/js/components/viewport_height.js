@@ -17,6 +17,6 @@ if( navigator.userAgent.match(/Android/i)
 
 // Funcion de evento que calcula el alto real del VH y lo asigna al body
 function setViewportHeightToBody() {
-  let viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-  document.body.style.height = viewportHeight + "px";
+  let viewportHeight = document.documentElement.clientHeight;
+  document.body.style.minHeight = viewportHeight + "px";
 }
