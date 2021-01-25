@@ -378,7 +378,7 @@
   }
 }
 
-@media (max-width: 1024px) and (min-width: 801px) and (min-aspect-ratio: 3/2) {
+@media (max-width: 1024px) and (min-width: 801px) and (orientation: landscape) {
   .sidebar__icon {
     width: 1em;
   }
@@ -464,7 +464,7 @@
   }
 }
 
-@media (max-width: 800px) and (min-width: 641px) and (min-aspect-ratio: 3/2) {
+@media (max-width: 800px) and (min-width: 641px) and (orientation: landscape) {
   .header__logo,
   .header__menu {
     width: 35px;
@@ -540,7 +540,7 @@
   }
 }
 
-@media (max-width: 640px) and (min-width: 426px) and (min-aspect-ratio: 3/2) {
+@media (max-width: 640px) and (min-width: 426px) and (orientation: landscape) {
   .header__logo,
   .header__menu {
     width: 35px;
