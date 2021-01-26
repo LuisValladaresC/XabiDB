@@ -78,7 +78,7 @@ function changeSlideWithScroll(e) {
     delta = e.wheelDelta;
   }
 
-  // Scroll hacia abajo
+  // Scroll hacia abajo | Slide inferior
   if (delta <= -scrollSensitivity && currentSlideNumber !== totalSlideNumber - 1) {
     // Cambia slide solo si la barra de navegacion (en caso exista) se encuentre al final 
     if (document.documentElement.clientHeight + document.documentElement.scrollTop >= document.documentElement.scrollHeight) {
@@ -88,7 +88,7 @@ function changeSlideWithScroll(e) {
       loadSlide();
     }
   }
-  // Scroll hacia arriba
+  // Scroll hacia arriba | Slide superior
   if (delta >= scrollSensitivity && currentSlideNumber !== 0) {
     // Cambia slide solo si la barra de navegacion (en caso exista) se encuentra en el superior
     if (document.documentElement.scrollTop <= 0) {
@@ -102,27 +102,36 @@ function changeSlideWithScroll(e) {
 
 // ---------- CAMBIO DE DIAPOSITIVA MEDIANTE EL TOUCH --------- //
 var initialTouchPosition;
-const touchSensitivity = 80; 
+var initialScrollTopPosition;
+const touchSensitivity = 50; 
 
-window.addEventListener('touchstart', (e) => initialTouchPosition = e.touches[0].clientX);
+window.addEventListener('touchstart', (e) => {
+  initialTouchPosition = e.touches[0].clientY
+  initialScrollTopPosition = document.documentElement.scrollTop;
+});
 window.addEventListener('touchend', changeSlideWithTouch);
 
 function changeSlideWithTouch(e) {  
   if (timerActivated) return;
-  let finishingTouchPosition = e.changedTouches[0].clientX;
+  let finishingTouchPosition = e.changedTouches[0].clientY;
 
-
-  // Touch a la Derecha
-  if (initialTouchPosition < finishingTouchPosition - touchSensitivity && currentSlideNumber !== totalSlideNumber - 1){
-    currentSlideNumber++;
-    loadSlide();
+  // Touch hacia superior | Slide inferior
+  if (initialTouchPosition > (finishingTouchPosition + touchSensitivity) && currentSlideNumber !== totalSlideNumber - 1) {
+    // Cambia slide solo si la barra de navegacion (en caso exista) se encuentre al final 
+    if (initialScrollTopPosition >= document.documentElement.scrollTop) {
+      currentSlideNumber++;
+      loadSlide();
+    }
   }
-  // Touch a la Izquierda
-  if (initialTouchPosition > finishingTouchPosition + touchSensitivity && currentSlideNumber !== 0) {
-    currentSlideNumber--;
-    loadSlide();
+  // Touch hacia abajo | Slide superior
+  if (initialTouchPosition < (finishingTouchPosition - touchSensitivity) && currentSlideNumber !== 0){
+    // Cambia slide solo si la barra de navegacion (en caso exista) se encuentra en el superior
+    if (initialScrollTopPosition <= 0) {
+      currentSlideNumber--;
+      loadSlide();
+    }
   }
-}
+  }
 
 // -------- CAMBIO DE DIAPOSITIVA MEDIANTE LAS NAV KEYS ------- //
 window.addEventListener('keydown', changeSlideWithNavigationKeys);
