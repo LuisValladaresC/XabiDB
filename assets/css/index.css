@@ -292,6 +292,42 @@
   }
 
 /* --------------------------------- */
+/* ---------- SCREEN LOCK ---------- */
+/* --------------------------------- */
+
+.screen_lock {
+  position: absolute;
+  width: 100%;
+  min-height: inherit;
+  background-color: black;
+  z-index: 1000;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen_lock__text {
+  color: white;
+  font-size: 1.7em;
+}
+
+@media (max-width: 800px) and (min-aspect-ratio: 4/2),
+       (max-width: 640px) and (min-aspect-ratio: 4/4) {
+  body {
+    overflow: hidden;
+  }
+
+  .header__logo{
+    z-index: 1100;
+  }
+
+  .screen_lock {
+    display: flex;
+  }
+}
+
+/* --------------------------------- */
 /* --------- MEDIA QUERIES --------- */
 /* --------------------------------- */
 
@@ -333,7 +369,6 @@
     }
   }
 } 
-
 
 @media (max-width: 1280px) {
   .hero__container {
@@ -754,13 +789,5 @@
 @media (max-width: 340px){
   .hero__title {
     font-size: 4.5rem;
-  }
-}
-
-@media (max-width: 800px) and (min-aspect-ratio: 4/2) {
-  @media (max-width: 640px) and (min-aspect-ratio: 4/4) {
-    .footer__link {
-      color: blue;
-    }
   }
 }
