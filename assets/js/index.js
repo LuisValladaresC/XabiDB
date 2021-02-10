@@ -23,22 +23,19 @@ $sidebar.innerHTML = templateHTML;
 /* ------------------------------------------------------------ */
 
 // ------ GESTION GLOBAL DE LAS DIAPOSITIVAS DEL CARRUSEL ----- //
-const $menu = document.querySelector('.menu');
 const $sidebarItems = Array.from(document.querySelectorAll('.sidebar__item'));
 const totalSlideNumber = $slides.length;
 var currentSlideNumber = 0;
 
 loadSlide();
 function loadSlide(){
-  // Activa el slide actual y modficia el background del Menu
+  // Activa el slide seleccionado
   $slides.map(($slide, index) => {
     if(currentSlideNumber == index){
       $slide.classList.add('carousel__item--active');
-      $menu.classList.add('menu--' + $slide.id)
       currentSlideNumber = index;
     } else {
       $slide.classList.remove('carousel__item--active');
-      $menu.classList.remove('menu--' + $slide.id)
     }
   });
 
