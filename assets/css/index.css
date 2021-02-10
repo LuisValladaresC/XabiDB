@@ -34,13 +34,13 @@
       display: block;
       width: 45px;
     }
-    .container--theme-black .header__logo {
+    .theme-black .header__logo {
       display: none;
     }
     .header__logo--dark {
       display: none;
     }
-    .container--theme-black .header__logo--dark {
+    .theme-black .header__logo--dark {
       display: block;
     }
 
@@ -62,13 +62,13 @@
     .header__menu:hover {
       transform: scale(0.9)
     }
-    .container--theme-black .header__menu {
+    .theme-black .header__menu {
       display: none;
     }
     .header__menu--dark {
       display: none;
     }
-    .container--theme-black .header__menu--dark {
+    .theme-black .header__menu--dark {
       display: block;
     }
 
@@ -115,7 +115,7 @@
           line-height: 0.8;
           margin-left: -0.05em;
         }
-        .carousel__item--theme-black .hero__title {
+        .theme-black .hero__title {
           color: #333333;
         }
 
@@ -129,7 +129,7 @@
           text-decoration: none;
           margin-top: 1em;
         }
-        .carousel__item--theme-black .hero__info {
+        .theme-black .hero__info {
           color: #333333;
         }
 
@@ -230,13 +230,13 @@
       opacity: 1;
       transform: scale(1.25) rotate(45deg);
     }
-    .container--theme-black .sidebar__icon {
+    .theme-black .sidebar__icon {
       display: none;
     }
     .sidebar__icon--dark {
       display: none;
     }
-    .container--theme-black .sidebar__icon--dark {
+    .theme-black .sidebar__icon--dark {
       display: block;
     }
 
@@ -268,13 +268,13 @@
       display: block;
       width: 0.6em;
     }
-    .container--theme-black .footer__icon-arrow {
+    .theme-black .footer__icon-arrow {
       display: none;
     }
     .footer__icon-arrow--dark {
       display: none;
     }
-    .container--theme-black .footer__icon-arrow--dark {
+    .theme-black .footer__icon-arrow--dark {
       display: block;
     }
 
@@ -287,7 +287,7 @@
     font-weight: 100;
     text-decoration: none;
   }
-  .container--theme-black .footer__link {
+  .theme-black .footer__link {
     color: #333333;
   }
 

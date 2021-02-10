@@ -5,6 +5,7 @@
 @import './normalize.css';
 @import './tipografias.css';
 @import './variables.css';
+@import './menu.css';
 
 html {
   font-family: 'Montserrat', sans-serif;

@@ -23,28 +23,30 @@ $sidebar.innerHTML = templateHTML;
 /* ------------------------------------------------------------ */
 
 // ------ GESTION GLOBAL DE LAS DIAPOSITIVAS DEL CARRUSEL ----- //
-const $container = document.querySelector('.container');
+const $menu = document.querySelector('.menu');
 const $sidebarItems = Array.from(document.querySelectorAll('.sidebar__item'));
 const totalSlideNumber = $slides.length;
 var currentSlideNumber = 0;
 
 loadSlide();
 function loadSlide(){
-  // Activa el slide actual
+  // Activa el slide actual y modficia el background del Menu
   $slides.map(($slide, index) => {
     if(currentSlideNumber == index){
       $slide.classList.add('carousel__item--active');
+      $menu.classList.add('menu--' + $slide.id)
       currentSlideNumber = index;
     } else {
       $slide.classList.remove('carousel__item--active');
+      $menu.classList.remove('menu--' + $slide.id)
     }
   });
 
   // Verfica si el carrusel es theme-black, en cuyo caso, activa los estilos de manera global 
   if($slides[currentSlideNumber].classList.contains('carousel__item--theme-black')) {
-    $container.classList.add('container--theme-black')
+    document.body.classList.add('theme-black')
   }else{
-    $container.classList.remove('container--theme-black')
+    document.body.classList.remove('theme-black')
   }
 
   // Activa el sidebar item correspondiente al slide actual 
